@@ -1,0 +1,1800 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Talent Elevate Consultancy — Strategic recruitment and training partner for ambitious organisations across India. Train. Transform. Thrive."
+    />
+    <title>Talent Elevate Consultancy — Train. Transform. Thrive.</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              navy: {
+                50: '#eef0fa',
+                100: '#d4d8f1',
+                200: '#aeb4e1',
+                300: '#7e87cd',
+                400: '#545eb6',
+                500: '#343da3',
+                600: '#2e3192',
+                700: '#242678',
+                800: '#1b1c5c',
+                900: '#131445',
+                950: '#0b0c2e',
+              },
+              brand: {
+                orange: '#F6821F',
+                'orange-dark': '#D96810',
+                'orange-light': '#F8A359',
+                red: '#ED1C24',
+                'red-dark': '#C91017',
+              },
+              ink: '#0B1124',
+            },
+            fontFamily: {
+              display: ['"Plus Jakarta Sans"', 'system-ui', 'sans-serif'],
+              sans: ['Manrope', 'system-ui', 'sans-serif'],
+            },
+            boxShadow: {
+              soft: '0 10px 40px -10px rgba(19, 20, 69, 0.15)',
+              glow: '0 20px 60px -20px rgba(246, 130, 31, 0.45)',
+              card: '0 4px 24px -6px rgba(19, 20, 69, 0.12)',
+            },
+            backgroundImage: {
+              'grad-brand':
+                'linear-gradient(135deg, #F6821F 0%, #ED1C24 100%)',
+              'grad-navy':
+                'linear-gradient(135deg, #242678 0%, #131445 100%)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Loader -->
+    <div class="loader-wrap" id="loader">
+      <div class="text-center">
+        <div
+          class="font-display text-3xl font-extrabold text-white mb-5"
+        >
+          <span class="grad-text">Talent Elevate</span>
+        </div>
+        <div class="loader-bar"></div>
+        <p
+          class="text-white/50 text-xs tracking-[0.3em] mt-4 uppercase"
+        >
+          Train · Transform · Thrive
+        </p>
+      </div>
+    </div>
+
+    <!-- Scroll progress -->
+    <div id="scrollProgress"></div>
+
+    <!-- =================== 1. TOP UTILITY BAR =================== -->
+    <div
+      class="hidden md:block bg-navy-900 text-white text-xs relative z-30"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between"
+      >
+        <div class="flex items-center gap-6">
+          <span class="flex items-center gap-2">
+            <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-orange"></i>
+            Hyderabad, Telangana, India
+          </span>
+          <span class="flex items-center gap-2 text-white/80">
+            <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-orange"></i>
+            Mon–Sat · 9:30 AM – 6:30 PM
+          </span>
+        </div>
+        <div class="flex items-center gap-5">
+          <div class="flex items-center gap-3">
+            <a
+              href="#"
+              class="hover:text-brand-orange transition"
+              aria-label="LinkedIn"
+              ><i data-lucide="linkedin" class="w-4 h-4"></i
+            ></a>
+            <a
+              href="#"
+              class="hover:text-brand-orange transition"
+              aria-label="Instagram"
+              ><i data-lucide="instagram" class="w-4 h-4"></i
+            ></a>
+            <a
+              href="#"
+              class="hover:text-brand-orange transition"
+              aria-label="X"
+              ><i data-lucide="twitter" class="w-4 h-4"></i
+            ></a>
+            <a
+              href="#"
+              class="hover:text-brand-orange transition"
+              aria-label="Facebook"
+              ><i data-lucide="facebook" class="w-4 h-4"></i
+            ></a>
+          </div>
+          <span class="h-4 w-px bg-white/20"></span>
+          <div class="flex items-center gap-3">
+            <a
+              href="sms:+910000000000"
+              class="hover:text-brand-orange transition flex items-center gap-1.5"
+              ><i data-lucide="message-square" class="w-3.5 h-3.5"></i> SMS</a
+            >
+            <a
+              href="mailto:hello@talentelevate.in"
+              class="hover:text-brand-orange transition flex items-center gap-1.5"
+              ><i data-lucide="mail" class="w-3.5 h-3.5"></i> Email</a
+            >
+            <a
+              href="https://wa.me/910000000000"
+              class="hover:text-brand-orange transition flex items-center gap-1.5"
+              ><i data-lucide="message-circle" class="w-3.5 h-3.5"></i>
+              WhatsApp</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- =================== 2. MAIN NAVIGATION =================== -->
+    <header
+      id="mainNav"
+      class="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-navy-100/60 transition-all"
+    >
+      <div
+        class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between"
+      >
+        <!-- Logo -->
+        <a href="#" class="flex items-center gap-3 group">
+          <img src="logo.jpeg" alt="Talent Elevate" class="h-14 md:h-16 w-auto object-contain" />
+        </a>
+
+        <!-- Desktop nav -->
+        <nav class="hidden lg:flex items-center gap-8">
+          <a href="#home" class="nav-link active text-sm font-semibold text-navy-900"
+            >Home</a
+          >
+          <a href="#about" class="nav-link text-sm font-semibold text-navy-900"
+            >About</a
+          >
+          <a href="#services" class="nav-link text-sm font-semibold text-navy-900"
+            >Services</a
+          >
+          <a href="#industries" class="nav-link text-sm font-semibold text-navy-900"
+            >Industries</a
+          >
+          <a href="#process" class="nav-link text-sm font-semibold text-navy-900"
+            >Process</a
+          >
+          <a href="#insights" class="nav-link text-sm font-semibold text-navy-900"
+            >Insights</a
+          >
+          <a href="#contact" class="nav-link text-sm font-semibold text-navy-900"
+            >Contact</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-3">
+          <button
+            class="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-navy-50 hover:bg-navy-100 transition"
+            aria-label="Search"
+          >
+            <i data-lucide="search" class="w-4 h-4 text-navy-900"></i>
+          </button>
+          <a
+            href="#contact"
+            class="hidden md:inline-flex btn-glow items-center gap-2 px-5 py-3 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow hover:shadow-glow"
+          >
+            Get Started
+            <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+          </a>
+          <button
+            id="menuBtn"
+            class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full bg-navy-900 text-white"
+            aria-label="Menu"
+          >
+            <i data-lucide="menu" class="w-5 h-5"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile menu drawer -->
+    <div
+      id="mobileMenu"
+      class="mobile-menu fixed inset-y-0 right-0 w-[88%] max-w-sm bg-navy-900 z-50 p-8 lg:hidden"
+    >
+      <div class="flex justify-between items-center mb-10">
+        <span class="text-white font-display font-bold text-lg"
+          >Menu</span
+        >
+        <button id="closeMenu" class="text-white" aria-label="Close">
+          <i data-lucide="x" class="w-6 h-6"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col gap-6 text-white text-2xl font-display font-bold">
+        <a href="#home" class="hover:text-brand-orange transition">Home</a>
+        <a href="#about" class="hover:text-brand-orange transition">About</a>
+        <a href="#services" class="hover:text-brand-orange transition"
+          >Services</a
+        >
+        <a href="#industries" class="hover:text-brand-orange transition"
+          >Industries</a
+        >
+        <a href="#process" class="hover:text-brand-orange transition">Process</a>
+        <a href="#insights" class="hover:text-brand-orange transition"
+          >Insights</a
+        >
+        <a href="#contact" class="hover:text-brand-orange transition">Contact</a>
+      </nav>
+      <a
+        href="#contact"
+        class="mt-10 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-grad-brand text-white font-semibold"
+        >Get Started <i data-lucide="arrow-right" class="w-4 h-4"></i
+      ></a>
+    </div>
+
+    <!-- Floating WhatsApp -->
+    <a
+      href="https://wa.me/910000000000"
+      target="_blank"
+      class="fixed bottom-6 right-6 z-30 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-2xl"
+      aria-label="WhatsApp"
+    >
+      <span
+        class="absolute inset-0 rounded-full bg-green-400 pulse-ring"
+      ></span>
+      <i data-lucide="message-circle" class="w-6 h-6 relative"></i>
+    </a>
+
+    <!-- =================== 3. HERO =================== -->
+    <section
+      id="home"
+      class="relative overflow-hidden bg-navy-900 text-white min-h-[100vh] flex items-center"
+    >
+      <!-- Background slides -->
+      <div class="absolute inset-0">
+        <div
+          class="hero-slide active"
+          style="
+            background-image: linear-gradient(
+                135deg,
+                rgba(19, 20, 69, 0.85),
+                rgba(19, 20, 69, 0.55)
+              ),
+              url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: linear-gradient(
+                135deg,
+                rgba(19, 20, 69, 0.85),
+                rgba(19, 20, 69, 0.55)
+              ),
+              url('https://images.unsplash.com/photo-1552581234-26160f608093?auto=format&fit=crop&w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: linear-gradient(
+                135deg,
+                rgba(19, 20, 69, 0.85),
+                rgba(19, 20, 69, 0.55)
+              ),
+              url('https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1920&q=80');
+          "
+        ></div>
+        <div
+          class="hero-slide"
+          style="
+            background-image: linear-gradient(
+                135deg,
+                rgba(19, 20, 69, 0.85),
+                rgba(19, 20, 69, 0.55)
+              ),
+              url('https://images.unsplash.com/photo-1531482615713-2afd69097998?auto=format&fit=crop&w=1920&q=80');
+          "
+        ></div>
+      </div>
+
+      <div
+        class="blob bg-brand-orange w-[500px] h-[500px] -top-32 -right-32"
+      ></div>
+      <div
+        class="blob bg-brand-red w-[400px] h-[400px] bottom-0 -left-32"
+        style="animation-delay: -7s"
+      ></div>
+
+      <div
+        class="relative w-full max-w-7xl mx-auto px-6 py-20 md:py-28"
+      >
+        <div class="max-w-3xl">
+          <span
+            class="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-white/15 bg-white/5 backdrop-blur text-xs font-semibold tracking-[0.2em] uppercase reveal"
+          >
+            <span
+              class="w-2 h-2 rounded-full bg-brand-orange shadow-[0_0_0_4px_rgba(242,107,40,.25)]"
+            ></span>
+            India's trusted recruitment & training partner
+          </span>
+
+          <h1
+            class="hero-h1 font-display font-extrabold text-4xl md:text-7xl leading-[1.05] mt-6 reveal"
+          >
+            Elevating Talent.
+            <br />
+            <span class="grad-text">Transforming Careers.</span>
+          </h1>
+
+          <p
+            class="text-lg md:text-xl text-white/80 mt-6 max-w-2xl leading-relaxed reveal"
+          >
+            Strategic recruitment and training partner for ambitious
+            organisations across India. We don't just place candidates —
+            we help them
+            <span class="text-brand-orange font-semibold">thrive</span>.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4 reveal">
+            <a
+              href="#contact"
+              class="btn-glow group inline-flex items-center gap-3 px-7 py-4 rounded-full bg-grad-brand text-white font-semibold shadow-glow"
+            >
+              Hire Talent
+              <i
+                data-lucide="arrow-up-right"
+                class="w-5 h-5 cta-arrow"
+              ></i>
+            </a>
+            <a
+              href="#services"
+              class="group inline-flex items-center gap-3 px-7 py-4 rounded-full border border-white/30 hover:border-white text-white font-semibold backdrop-blur transition hover:bg-white/5"
+            >
+              Find Your Next Role
+              <i data-lucide="briefcase" class="w-5 h-5"></i>
+            </a>
+          </div>
+
+          <!-- Hero stats inline -->
+          <div
+            class="mt-14 grid grid-cols-2 sm:grid-cols-4 gap-6 max-w-2xl reveal"
+          >
+            <div>
+              <div
+                class="font-display font-extrabold text-3xl md:text-4xl stat-num"
+                data-counter="500"
+              >
+                0
+              </div>
+              <div class="text-white/60 text-xs uppercase tracking-wider mt-1">
+                Placements
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-display font-extrabold text-3xl md:text-4xl stat-num"
+                data-counter="50"
+              >
+                0
+              </div>
+              <div class="text-white/60 text-xs uppercase tracking-wider mt-1">
+                Companies
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-display font-extrabold text-3xl md:text-4xl stat-num"
+                data-counter="4"
+              >
+                0
+              </div>
+              <div class="text-white/60 text-xs uppercase tracking-wider mt-1">
+                Industries
+              </div>
+            </div>
+            <div>
+              <div
+                class="font-display font-extrabold text-3xl md:text-4xl stat-num"
+                data-counter="98"
+                data-suffix="%"
+              >
+                0
+              </div>
+              <div class="text-white/60 text-xs uppercase tracking-wider mt-1">
+                Client Retention
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide indicators -->
+        <div class="mt-16 flex items-center gap-3" id="slideDots">
+          <button
+            class="dot w-10 h-1 rounded-full bg-white"
+            data-slide="0"
+          ></button>
+          <button
+            class="dot w-10 h-1 rounded-full bg-white/30"
+            data-slide="1"
+          ></button>
+          <button
+            class="dot w-10 h-1 rounded-full bg-white/30"
+            data-slide="2"
+          ></button>
+          <button
+            class="dot w-10 h-1 rounded-full bg-white/30"
+            data-slide="3"
+          ></button>
+        </div>
+
+        <!-- Scroll cue -->
+        <div class="absolute bottom-6 right-6 hidden md:flex items-center gap-3 text-white/60 text-xs uppercase tracking-[0.3em]">
+          Scroll
+          <span class="w-12 h-px bg-white/30"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 4. ABOUT =================== -->
+    <section id="about" class="py-24 md:py-32 bg-white relative overflow-hidden">
+      <div class="grid-bg absolute inset-0 opacity-50 pointer-events-none"></div>
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          <!-- Image collage -->
+          <div class="lg:col-span-6 relative reveal">
+            <div class="grid grid-cols-2 gap-4 relative">
+              <div class="space-y-4">
+                <div class="rounded-3xl overflow-hidden aspect-[3/4] shadow-soft">
+                  <img
+                    src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=600&q=80"
+                    alt="Strategy meeting"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+                <div class="rounded-3xl overflow-hidden aspect-square shadow-soft">
+                  <img
+                    src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=600&q=80"
+                    alt="Team collaboration"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+              <div class="space-y-4 mt-12">
+                <div class="rounded-3xl overflow-hidden aspect-square shadow-soft">
+                  <img
+                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&w=600&q=80"
+                    alt="Successful interview"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+                <div class="rounded-3xl overflow-hidden aspect-[3/4] shadow-soft">
+                  <img
+                    src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=600&q=80"
+                    alt="Workshop"
+                    class="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                </div>
+              </div>
+
+              <!-- Floating badge -->
+              <div
+                class="absolute -bottom-6 -left-6 bg-white rounded-2xl shadow-soft border border-navy-100 p-5 flex items-center gap-3 max-w-[260px]"
+              >
+                <div
+                  class="w-12 h-12 rounded-xl bg-grad-brand flex items-center justify-center text-white shrink-0"
+                >
+                  <i data-lucide="award" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <div class="font-display font-extrabold text-navy-900 text-lg">
+                    98% Retention
+                  </div>
+                  <div class="text-xs text-navy-900/60">
+                    Of clients stay year over year
+                  </div>
+                </div>
+              </div>
+
+              <!-- Floating circular logo accent -->
+              <div
+                class="absolute -top-6 -right-4 w-28 h-28 rounded-full bg-grad-brand shadow-glow flex items-center justify-center rotate-12 hidden md:flex"
+              >
+                <div class="text-white text-center leading-tight font-display">
+                  <div class="text-[10px] tracking-[0.2em] uppercase">Since</div>
+                  <div class="font-extrabold text-2xl">2018</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="lg:col-span-6 space-y-6">
+            <span class="eyebrow reveal">About Talent Elevate</span>
+            <h2
+              class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 leading-tight reveal"
+            >
+              Empowering Excellence —
+              <span class="grad-text">your trusted partner</span> for
+              talent & development.
+            </h2>
+            <p class="text-lg text-navy-900/75 leading-relaxed reveal">
+              We're specialists in connecting <strong>exceptional talent</strong>
+              with visionary enterprises. From sourcing and screening to
+              structured training, we own the end-to-end journey of building
+              teams that scale. Our advantage isn't volume — it's the
+              <em>Train · Transform · Thrive</em> edge that turns a hire
+              into a high-performer.
+            </p>
+
+            <div
+              class="grid sm:grid-cols-3 gap-4 mt-4 reveal"
+            >
+              <div
+                class="p-5 rounded-2xl bg-navy-50 border border-navy-100 hover:border-brand-orange transition"
+              >
+                <i
+                  data-lucide="target"
+                  class="w-6 h-6 text-brand-orange mb-3"
+                ></i>
+                <div class="font-display font-bold text-navy-900">
+                  Mission
+                </div>
+                <p class="text-sm text-navy-900/70 mt-1">
+                  Connect talent with opportunity, end-to-end.
+                </p>
+              </div>
+              <div
+                class="p-5 rounded-2xl bg-navy-50 border border-navy-100 hover:border-brand-orange transition"
+              >
+                <i
+                  data-lucide="eye"
+                  class="w-6 h-6 text-brand-orange mb-3"
+                ></i>
+                <div class="font-display font-bold text-navy-900">Vision</div>
+                <p class="text-sm text-navy-900/70 mt-1">
+                  India's most trusted hiring & training partner.
+                </p>
+              </div>
+              <div
+                class="p-5 rounded-2xl bg-navy-50 border border-navy-100 hover:border-brand-orange transition"
+              >
+                <i
+                  data-lucide="heart-handshake"
+                  class="w-6 h-6 text-brand-orange mb-3"
+                ></i>
+                <div class="font-display font-bold text-navy-900">Values</div>
+                <p class="text-sm text-navy-900/70 mt-1">
+                  Integrity. Quality. Long-term partnership.
+                </p>
+              </div>
+            </div>
+
+            <a
+              href="#"
+              class="group inline-flex items-center gap-2 mt-2 text-brand-orange font-semibold reveal"
+            >
+              Read our full story
+              <i
+                data-lucide="arrow-right"
+                class="w-4 h-4 cta-arrow"
+              ></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 5. WHAT SETS US APART =================== -->
+    <section class="py-24 md:py-32 bg-navy-50/40 relative overflow-hidden">
+      <div
+        class="blob bg-brand-orange/30 w-[400px] h-[400px] -top-20 -left-20"
+      ></div>
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="eyebrow">What sets us apart</span>
+          <h2
+            class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-6 leading-tight"
+          >
+            Six reasons teams choose
+            <span class="grad-text">Talent Elevate</span>
+          </h2>
+          <p class="text-navy-900/70 mt-5 text-lg">
+            Built on quality, scaled by technology, delivered with care.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-16">
+          <!-- Card 1 -->
+          <div class="feat-card group rounded-3xl bg-white border border-navy-100 overflow-hidden reveal">
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=800&q=80"
+                alt="End to end talent"
+                class="svc-img w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-brand-orange">
+                <i data-lucide="layers" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <div class="p-7">
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
+                End-to-End Talent Solutions
+              </h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Sourcing to onboarding — the full hiring lifecycle handled with
+                one accountable partner.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="feat-card group rounded-3xl bg-white border border-navy-100 overflow-hidden reveal">
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                alt="Train transform thrive"
+                class="svc-img w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-brand-orange">
+                <i data-lucide="trending-up" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <div class="p-7">
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
+                Train, Transform, Thrive
+              </h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                We don't just place candidates — we develop them through
+                structured, role-aligned training.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="feat-card group rounded-3xl bg-white border border-navy-100 overflow-hidden reveal">
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=800&q=80"
+                alt="Industry reach"
+                class="svc-img w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-brand-orange">
+                <i data-lucide="globe-2" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <div class="p-7">
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
+                Industry-Wide Reach
+              </h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                From startups to enterprises across IT, healthcare, BFSI,
+                manufacturing and more.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="feat-card group rounded-3xl bg-white border border-navy-100 overflow-hidden reveal">
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c?auto=format&fit=crop&w=800&q=80"
+                alt="Quality over quantity"
+                class="svc-img w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-brand-orange">
+                <i data-lucide="badge-check" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <div class="p-7">
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
+                Quality Over Quantity
+              </h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Every candidate screened against role-specific competencies —
+                not keywords.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 5 -->
+          <div class="feat-card group rounded-3xl bg-white border border-navy-100 overflow-hidden reveal">
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=800&q=80"
+                alt="Trusted brands"
+                class="svc-img w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-brand-orange">
+                <i data-lucide="award" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <div class="p-7">
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
+                Trusted by Growing Brands
+              </h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Years of combined experience helping organisations build lasting
+                teams.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 6 -->
+          <div class="feat-card group rounded-3xl bg-white border border-navy-100 overflow-hidden reveal">
+            <div class="aspect-[16/10] overflow-hidden relative">
+              <img
+                src="https://images.unsplash.com/photo-1531497865144-0464ef8fb9a9?auto=format&fit=crop&w=800&q=80"
+                alt="Tech enabled"
+                class="svc-img w-full h-full object-cover"
+              />
+              <div class="absolute inset-0 bg-gradient-to-t from-navy-900/80 via-navy-900/20 to-transparent"></div>
+              <div class="absolute top-4 left-4 w-12 h-12 rounded-xl bg-white/95 backdrop-blur flex items-center justify-center text-brand-orange">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+            </div>
+            <div class="p-7">
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">
+                Technology-Enabled
+              </h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Modern ATS, structured interviews, data-driven shortlists you
+                can trust.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 6. SERVICES =================== -->
+    <section id="services" class="py-24 md:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 reveal">
+          <div class="max-w-2xl">
+            <span class="eyebrow">Our services</span>
+            <h2
+              class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-6 leading-tight"
+            >
+              A full-stack hiring &
+              <span class="grad-text">development engine</span>.
+            </h2>
+          </div>
+          <p class="text-navy-900/70 max-w-md text-lg">
+            Pick a service or stitch them into one program — we'll meet you
+            where you are.
+          </p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <!-- Service Card -->
+          <article
+            class="svc-card group rounded-3xl overflow-hidden bg-navy-50 border border-navy-100 reveal"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80"
+                alt="Permanent staffing"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-7">
+              <div
+                class="inline-flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-3"
+              >
+                <i data-lucide="users" class="w-3.5 h-3.5"></i>
+                Recruitment
+              </div>
+              <h3
+                class="font-display font-bold text-2xl text-navy-900 mb-2"
+              >
+                Permanent Staffing
+              </h3>
+              <p class="text-navy-900/70 mb-5">
+                Long-term hires across functions and seniority — from
+                associate to leadership.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-navy-900 font-semibold group-hover:text-brand-orange transition"
+                >Learn More
+                <i
+                  data-lucide="arrow-right"
+                  class="w-4 h-4 cta-arrow"
+                ></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden bg-navy-50 border border-navy-100 reveal"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=800&q=80"
+                alt="Contract staffing"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-7">
+              <div
+                class="inline-flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-3"
+              >
+                <i data-lucide="clock" class="w-3.5 h-3.5"></i>
+                Flexible
+              </div>
+              <h3
+                class="font-display font-bold text-2xl text-navy-900 mb-2"
+              >
+                Contract & Project Staffing
+              </h3>
+              <p class="text-navy-900/70 mb-5">
+                Time-bound talent for project loads, peak demand and
+                specialist work.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-navy-900 font-semibold group-hover:text-brand-orange transition"
+                >Learn More
+                <i
+                  data-lucide="arrow-right"
+                  class="w-4 h-4 cta-arrow"
+                ></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden bg-navy-50 border border-navy-100 reveal"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1573164713988-8665fc963095?auto=format&fit=crop&w=800&q=80"
+                alt="Executive search"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-7">
+              <div
+                class="inline-flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-3"
+              >
+                <i data-lucide="crown" class="w-3.5 h-3.5"></i>
+                Leadership
+              </div>
+              <h3
+                class="font-display font-bold text-2xl text-navy-900 mb-2"
+              >
+                Executive Search
+              </h3>
+              <p class="text-navy-900/70 mb-5">
+                Discreet search for senior leadership and niche specialist
+                roles.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-navy-900 font-semibold group-hover:text-brand-orange transition"
+                >Learn More
+                <i
+                  data-lucide="arrow-right"
+                  class="w-4 h-4 cta-arrow"
+                ></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden bg-navy-50 border border-navy-100 reveal"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&w=800&q=80"
+                alt="Campus hiring"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-7">
+              <div
+                class="inline-flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-3"
+              >
+                <i data-lucide="graduation-cap" class="w-3.5 h-3.5"></i>
+                Pipeline
+              </div>
+              <h3
+                class="font-display font-bold text-2xl text-navy-900 mb-2"
+              >
+                Campus Hiring
+              </h3>
+              <p class="text-navy-900/70 mb-5">
+                Structured campus drives that build a steady, high-quality
+                fresher pipeline.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-navy-900 font-semibold group-hover:text-brand-orange transition"
+                >Learn More
+                <i
+                  data-lucide="arrow-right"
+                  class="w-4 h-4 cta-arrow"
+                ></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden bg-navy-50 border border-navy-100 reveal"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&w=800&q=80"
+                alt="Corporate training"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-7">
+              <div
+                class="inline-flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-3"
+              >
+                <i data-lucide="book-open" class="w-3.5 h-3.5"></i>
+                Training
+              </div>
+              <h3
+                class="font-display font-bold text-2xl text-navy-900 mb-2"
+              >
+                Corporate Training
+              </h3>
+              <p class="text-navy-900/70 mb-5">
+                Soft skills, technical bootcamps and leadership development
+                programs.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-navy-900 font-semibold group-hover:text-brand-orange transition"
+                >Learn More
+                <i
+                  data-lucide="arrow-right"
+                  class="w-4 h-4 cta-arrow"
+                ></i
+              ></a>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden bg-navy-50 border border-navy-100 reveal"
+          >
+            <div class="aspect-[4/3] overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=800&q=80"
+                alt="Career coaching"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-7">
+              <div
+                class="inline-flex items-center gap-2 text-xs font-semibold text-brand-orange uppercase tracking-wider mb-3"
+              >
+                <i data-lucide="compass" class="w-3.5 h-3.5"></i>
+                For Candidates
+              </div>
+              <h3
+                class="font-display font-bold text-2xl text-navy-900 mb-2"
+              >
+                Career Coaching & Placement
+              </h3>
+              <p class="text-navy-900/70 mb-5">
+                Resume reviews, mock interviews and end-to-end placement
+                support.
+              </p>
+              <a
+                href="#"
+                class="inline-flex items-center gap-2 text-navy-900 font-semibold group-hover:text-brand-orange transition"
+                >Learn More
+                <i
+                  data-lucide="arrow-right"
+                  class="w-4 h-4 cta-arrow"
+                ></i
+              ></a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 7. INDUSTRIES =================== -->
+    <section
+      id="industries"
+      class="py-24 md:py-32 bg-gradient-to-b from-navy-50/40 to-white relative"
+    >
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="eyebrow">Industries we serve</span>
+          <h2
+            class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-6 leading-tight"
+          >
+            Deep reach across
+            <span class="grad-text">core industries</span>.
+          </h2>
+          <p class="text-navy-900/70 mt-5 text-lg">
+            Whatever your sector, we've placed there before.
+          </p>
+        </div>
+
+        <div
+          class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4 mt-16"
+        >
+          <!-- Industry image-tile cards -->
+          <a href="#" class="ind-tile group relative aspect-[4/5] rounded-2xl overflow-hidden reveal block">
+            <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=600&q=80" alt="IT" class="absolute inset-0 w-full h-full object-cover svc-img" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+              <div class="w-9 h-9 rounded-lg bg-grad-brand flex items-center justify-center mb-2"><i data-lucide="cpu" class="w-4 h-4"></i></div>
+              <div class="font-display font-bold text-lg leading-tight">IT</div>
+            </div>
+          </a>
+          <a href="#" class="ind-tile group relative aspect-[4/5] rounded-2xl overflow-hidden reveal block">
+            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=600&q=80" alt="BPO" class="absolute inset-0 w-full h-full object-cover svc-img" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+              <div class="w-9 h-9 rounded-lg bg-grad-brand flex items-center justify-center mb-2"><i data-lucide="headphones" class="w-4 h-4"></i></div>
+              <div class="font-display font-bold text-lg leading-tight">BPO</div>
+            </div>
+          </a>
+          <a href="#" class="ind-tile group relative aspect-[4/5] rounded-2xl overflow-hidden reveal block">
+            <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?auto=format&fit=crop&w=600&q=80" alt="Medical" class="absolute inset-0 w-full h-full object-cover svc-img" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+              <div class="w-9 h-9 rounded-lg bg-grad-brand flex items-center justify-center mb-2"><i data-lucide="stethoscope" class="w-4 h-4"></i></div>
+              <div class="font-display font-bold text-lg leading-tight">Medical</div>
+            </div>
+          </a>
+          <a href="#" class="ind-tile group relative aspect-[4/5] rounded-2xl overflow-hidden reveal block">
+            <img src="https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=600&q=80" alt="Automobile" class="absolute inset-0 w-full h-full object-cover svc-img" />
+            <div class="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/40 to-transparent"></div>
+            <div class="absolute inset-x-0 bottom-0 p-5 text-white">
+              <div class="w-9 h-9 rounded-lg bg-grad-brand flex items-center justify-center mb-2"><i data-lucide="car" class="w-4 h-4"></i></div>
+              <div class="font-display font-bold text-lg leading-tight">Automobile</div>
+            </div>
+          </a>
+        </div>
+
+
+      </div>
+    </section>
+
+    <!-- =================== 8. PROCESS =================== -->
+    <section
+      id="process"
+      class="py-24 md:py-32 bg-navy-900 text-white relative overflow-hidden"
+    >
+      <div
+        class="blob bg-brand-orange/30 w-[500px] h-[500px] -top-32 right-0"
+      ></div>
+      <div
+        class="blob bg-brand-red/20 w-[400px] h-[400px] bottom-0 left-0"
+        style="animation-delay: -5s"
+      ></div>
+
+      <div class="max-w-7xl mx-auto px-6 relative">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="eyebrow !text-brand-orange-light !border-white/15 !bg-white/5">How it works</span>
+          <h2
+            class="font-display font-extrabold text-3xl md:text-5xl mt-6 leading-tight"
+          >
+            A clear path from
+            <span class="grad-text">brief to onboarded</span>.
+          </h2>
+          <p class="text-white/70 mt-5 text-lg">
+            No mystery. Just four steps, transparent timelines and constant
+            communication.
+          </p>
+        </div>
+
+        <div class="mt-20 relative">
+          <!-- Connector -->
+          <div
+            class="hidden lg:block absolute top-12 left-0 right-0 step-line"
+          ></div>
+
+          <div class="grid lg:grid-cols-4 gap-8 relative">
+            <!-- Step 1 -->
+            <div class="reveal">
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-24 h-24 rounded-full bg-grad-brand flex items-center justify-center mb-6 shadow-glow relative"
+                >
+                  <span class="font-display font-extrabold text-3xl">1</span>
+                  <i
+                    data-lucide="phone-call"
+                    class="absolute -bottom-2 -right-2 w-9 h-9 p-2 bg-white text-brand-orange rounded-full shadow-soft"
+                  ></i>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">
+                  Discovery Call
+                </h3>
+                <p class="text-white/70 leading-relaxed">
+                  We understand your role, culture and constraints — what
+                  good looks like, and what won't work.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 2 -->
+            <div class="reveal">
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-24 h-24 rounded-full bg-grad-brand flex items-center justify-center mb-6 shadow-glow relative"
+                >
+                  <span class="font-display font-extrabold text-3xl">2</span>
+                  <i
+                    data-lucide="search-check"
+                    class="absolute -bottom-2 -right-2 w-9 h-9 p-2 bg-white text-brand-orange rounded-full shadow-soft"
+                  ></i>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">
+                  Source & Screen
+                </h3>
+                <p class="text-white/70 leading-relaxed">
+                  We shortlist 3–5 candidates against your brief — depth
+                  over volume.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 3 -->
+            <div class="reveal">
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-24 h-24 rounded-full bg-grad-brand flex items-center justify-center mb-6 shadow-glow relative"
+                >
+                  <span class="font-display font-extrabold text-3xl">3</span>
+                  <i
+                    data-lucide="users"
+                    class="absolute -bottom-2 -right-2 w-9 h-9 p-2 bg-white text-brand-orange rounded-full shadow-soft"
+                  ></i>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">
+                  Interview & Select
+                </h3>
+                <p class="text-white/70 leading-relaxed">
+                  We coordinate scheduling, gather feedback and keep
+                  everyone moving.
+                </p>
+              </div>
+            </div>
+
+            <!-- Step 4 -->
+            <div class="reveal">
+              <div class="flex flex-col items-center text-center">
+                <div
+                  class="w-24 h-24 rounded-full bg-grad-brand flex items-center justify-center mb-6 shadow-glow relative"
+                >
+                  <span class="font-display font-extrabold text-3xl">4</span>
+                  <i
+                    data-lucide="rocket"
+                    class="absolute -bottom-2 -right-2 w-9 h-9 p-2 bg-white text-brand-orange rounded-full shadow-soft"
+                  ></i>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">
+                  Offer & Onboard
+                </h3>
+                <p class="text-white/70 leading-relaxed">
+                  We support negotiation and the first 90 days — because
+                  hiring isn't done at offer.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 9. CLIENTS / STATS =================== -->
+    <section class="py-20 bg-white border-y border-navy-100">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center mb-12 reveal">
+          <p
+            class="text-xs font-semibold tracking-[0.3em] uppercase text-navy-900/50"
+          >
+            Trusted by ambitious teams across India
+          </p>
+        </div>
+
+        <div class="marquee">
+          <div class="marquee-track">
+            <!-- Logo placeholders / brand names -->
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Acumen</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">NovaTech</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Brightline</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Helix Labs</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Quantix</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Aurora&Co</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Vertex</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Pulse</div>
+            <!-- duplicate for seamless loop -->
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Acumen</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">NovaTech</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Brightline</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Helix Labs</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Quantix</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Aurora&Co</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Vertex</div>
+            <div class="text-3xl font-display font-extrabold text-navy-900/30 hover:text-navy-900 transition">Pulse</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 10. TESTIMONIALS =================== -->
+    <section class="py-24 md:py-32 bg-navy-50/40 relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto reveal">
+          <span class="eyebrow">Testimonials</span>
+          <h2
+            class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-6 leading-tight"
+          >
+            What our partners
+            <span class="grad-text">are saying</span>
+          </h2>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6 mt-16">
+          <!-- Testimonial 1 -->
+          <article
+            class="relative p-8 rounded-3xl bg-white border border-navy-100 shadow-card reveal hover:-translate-y-2 transition-transform duration-500"
+          >
+            <span class="quote-mark absolute top-4 left-6">"</span>
+            <div class="flex items-center gap-1 text-brand-orange mb-4 relative z-10">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-navy-900/80 leading-relaxed relative z-10 mb-6">
+              Talent Elevate found us a senior developer in two weeks.
+              Best agency we've worked with — disciplined, candid and fast.
+            </p>
+            <div class="flex items-center gap-3 pt-5 border-t border-navy-100">
+              <img
+                src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80"
+                alt="Ananya Reddy"
+                class="w-12 h-12 rounded-full object-cover ring-2 ring-brand-orange/40"
+              />
+              <div>
+                <div class="font-display font-bold text-navy-900">
+                  Ananya Reddy
+                </div>
+                <div class="text-xs text-navy-900/60">
+                  VP Engineering · NovaTech
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="relative p-8 rounded-3xl bg-white border border-navy-100 shadow-card reveal hover:-translate-y-2 transition-transform duration-500"
+          >
+            <span class="quote-mark absolute top-4 left-6">"</span>
+            <div class="flex items-center gap-1 text-brand-orange mb-4 relative z-10">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-navy-900/80 leading-relaxed relative z-10 mb-6">
+              Their training program changed how our managers run 1:1s.
+              Real shifts, not just slides.
+            </p>
+            <div class="flex items-center gap-3 pt-5 border-t border-navy-100">
+              <img
+                src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80"
+                alt="Karan Shah"
+                class="w-12 h-12 rounded-full object-cover ring-2 ring-brand-orange/40"
+              />
+              <div>
+                <div class="font-display font-bold text-navy-900">
+                  Karan Shah
+                </div>
+                <div class="text-xs text-navy-900/60">
+                  COO · Brightline Logistics
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article
+            class="relative p-8 rounded-3xl bg-white border border-navy-100 shadow-card reveal hover:-translate-y-2 transition-transform duration-500"
+          >
+            <span class="quote-mark absolute top-4 left-6">"</span>
+            <div class="flex items-center gap-1 text-brand-orange mb-4 relative z-10">
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+              <i data-lucide="star" class="w-4 h-4 fill-current"></i>
+            </div>
+            <p class="text-navy-900/80 leading-relaxed relative z-10 mb-6">
+              From mock interviews to my final offer, the coaching team
+              had my back. Got placed in five weeks.
+            </p>
+            <div class="flex items-center gap-3 pt-5 border-t border-navy-100">
+              <img
+                src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80"
+                alt="Priya Verma"
+                class="w-12 h-12 rounded-full object-cover ring-2 ring-brand-orange/40"
+              />
+              <div>
+                <div class="font-display font-bold text-navy-900">
+                  Priya Verma
+                </div>
+                <div class="text-xs text-navy-900/60">
+                  Data Analyst · Helix Labs
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+
+        <div class="text-center mt-12 reveal">
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 text-brand-orange font-semibold"
+          >
+            View all reviews
+            <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== MOMENTS / GALLERY =================== -->
+    <section class="py-24 md:py-32 bg-white relative overflow-hidden">
+      <div class="max-w-7xl mx-auto px-6 mb-16">
+        <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 reveal">
+          <div class="max-w-2xl">
+            <span class="eyebrow">Moments that matter</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-6 leading-tight">
+              Behind the scenes at <span class="grad-text">Talent Elevate</span>.
+            </h2>
+          </div>
+          <p class="text-navy-900/70 max-w-md">
+            Training rooms, placement days, candid wins — the human side of every hire.
+          </p>
+        </div>
+      </div>
+
+      <!-- Bleed gallery -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3 px-3">
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80" alt="Training session" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group mt-8">
+          <img src="https://images.unsplash.com/photo-1543269865-cbf427effbad?auto=format&fit=crop&w=800&q=80" alt="Group discussion" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group">
+          <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" alt="Candidates collaborating" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group mt-8">
+          <img src="https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=800&q=80" alt="Office life" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group">
+          <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=800&q=80" alt="Interview prep" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group mt-8">
+          <img src="https://images.unsplash.com/photo-1529070538774-1843cb3265df?auto=format&fit=crop&w=800&q=80" alt="Placement celebration" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group">
+          <img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=80" alt="Workshop" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+        <div class="reveal aspect-[3/4] overflow-hidden rounded-2xl group mt-8">
+          <img src="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?auto=format&fit=crop&w=800&q=80" alt="Career talk" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 11. CTA BAND =================== -->
+    <section id="contact" class="relative">
+      <div class="relative overflow-hidden">
+        <!-- Background image with overlay -->
+        <div
+          id="ctaBg"
+          class="absolute inset-0 bg-cover bg-center"
+          style="background-image: url('https://images.unsplash.com/photo-1521737852567-6949f3f9f2b5?auto=format&fit=crop&w=1920&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-r from-navy-950/95 via-navy-900/85 to-brand-red/70"></div>
+        <div
+          class="absolute -top-20 -left-20 w-80 h-80 rounded-full bg-brand-orange/30 blur-3xl"
+        ></div>
+        <div
+          class="absolute -bottom-20 -right-20 w-80 h-80 rounded-full bg-brand-red/30 blur-3xl"
+        ></div>
+        <div
+          class="max-w-7xl mx-auto px-6 py-20 md:py-32 relative text-center text-white"
+        >
+          <span class="eyebrow !text-brand-orange-light !border-white/20 !bg-white/10 reveal">Let's talk</span>
+          <h2
+            class="font-display font-extrabold text-3xl md:text-6xl leading-tight reveal mt-6"
+          >
+            Ready to elevate your team —
+            <br />
+            or <span class="grad-text">your career?</span>
+          </h2>
+          <p
+            class="text-white/85 text-lg md:text-xl mt-6 max-w-2xl mx-auto reveal"
+          >
+            One conversation away. Tell us what you're trying to build, and
+            we'll show you the talent path to get there.
+          </p>
+          <div
+            class="mt-10 flex flex-wrap items-center justify-center gap-4 reveal"
+          >
+            <a
+              href="#"
+              class="btn-glow group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-grad-brand text-white font-semibold shadow-glow"
+            >
+              Schedule a Call
+              <i
+                data-lucide="calendar"
+                class="w-5 h-5 cta-arrow"
+              ></i>
+            </a>
+            <a
+              href="#"
+              class="group inline-flex items-center gap-3 px-8 py-4 rounded-full bg-white text-navy-900 font-semibold hover:bg-navy-900 hover:text-white transition shadow-2xl"
+            >
+              Submit Your Resume
+              <i
+                data-lucide="file-text"
+                class="w-5 h-5 cta-arrow"
+              ></i>
+            </a>
+          </div>
+
+          <!-- Trust strip -->
+          <div class="mt-14 flex flex-wrap justify-center gap-x-10 gap-y-4 text-white/70 text-sm reveal">
+            <span class="flex items-center gap-2"><i data-lucide="shield-check" class="w-4 h-4 text-brand-orange-light"></i> ISO-aligned process</span>
+            <span class="flex items-center gap-2"><i data-lucide="lock" class="w-4 h-4 text-brand-orange-light"></i> Confidential by default</span>
+            <span class="flex items-center gap-2"><i data-lucide="zap" class="w-4 h-4 text-brand-orange-light"></i> Avg shortlist in 7 days</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 12. INSIGHTS =================== -->
+    <section id="insights" class="py-24 md:py-32 bg-white">
+      <div class="max-w-7xl mx-auto px-6">
+        <div
+          class="flex flex-col md:flex-row md:items-end md:justify-between gap-6 mb-16 reveal"
+        >
+          <div class="max-w-2xl">
+            <span class="eyebrow">Resources & Insights</span>
+            <h2
+              class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-6 leading-tight"
+            >
+              Hiring guides &
+              <span class="grad-text">industry pulse</span>.
+            </h2>
+          </div>
+          <a
+            href="#"
+            class="inline-flex items-center gap-2 text-brand-orange font-semibold"
+          >
+            View all articles
+            <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+          </a>
+        </div>
+
+        <div class="grid md:grid-cols-3 gap-6">
+          <article
+            class="svc-card group rounded-3xl overflow-hidden border border-navy-100 reveal"
+          >
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=800&q=80"
+                alt="2026 hiring trends"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-navy-900/60 mb-3">
+                <span>Apr 22, 2026</span>·<span>6 min read</span>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-navy-900 mb-2 group-hover:text-brand-orange transition"
+              >
+                Top 10 Hiring Trends for 2026
+              </h3>
+              <p class="text-navy-900/70 text-sm">
+                The shifts in talent supply, comp expectations and AI-screening
+                you need to plan for.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden border border-navy-100 reveal"
+          >
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1586281380349-632531db7ed4?auto=format&fit=crop&w=800&q=80"
+                alt="Resume that beats ATS"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-navy-900/60 mb-3">
+                <span>Apr 12, 2026</span>·<span>5 min read</span>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-navy-900 mb-2 group-hover:text-brand-orange transition"
+              >
+                How to Write a Resume That Gets Past ATS Screens
+              </h3>
+              <p class="text-navy-900/70 text-sm">
+                Practical formatting and keyword strategies that work in
+                today's ATS pipelines.
+              </p>
+            </div>
+          </article>
+
+          <article
+            class="svc-card group rounded-3xl overflow-hidden border border-navy-100 reveal"
+          >
+            <div class="aspect-video overflow-hidden">
+              <img
+                src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?auto=format&fit=crop&w=800&q=80"
+                alt="Training that sticks"
+                class="svc-img w-full h-full object-cover"
+              />
+            </div>
+            <div class="p-6">
+              <div class="flex items-center gap-3 text-xs text-navy-900/60 mb-3">
+                <span>Mar 30, 2026</span>·<span>8 min read</span>
+              </div>
+              <h3
+                class="font-display font-bold text-xl text-navy-900 mb-2 group-hover:text-brand-orange transition"
+              >
+                Building a Training Program That Actually Sticks
+              </h3>
+              <p class="text-navy-900/70 text-sm">
+                Why most corporate training fades — and the four design
+                principles that make it last.
+              </p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- =================== 13. FOOTER =================== -->
+    <footer class="bg-navy-950 text-white pt-20 pb-8 relative">
+      <div class="max-w-7xl mx-auto px-6">
+        <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-12">
+          <!-- Quick contact -->
+          <div>
+            <a href="#" class="flex items-center gap-3 mb-5">
+              <img src="logo.jpeg" alt="Talent Elevate" class="h-14 md:h-16 w-auto object-contain bg-white p-2 rounded-xl" />
+            </a>
+            <p class="text-white/60 text-sm leading-relaxed mb-5">
+              Strategic recruitment & training partner for ambitious teams
+              across India.
+            </p>
+            <div class="space-y-2 text-sm">
+              <a
+                href="#"
+                class="flex items-center gap-2 text-white/70 foot-link"
+                ><i
+                  data-lucide="map-pin"
+                  class="w-4 h-4 text-brand-orange"
+                ></i>
+                Hyderabad, Telangana, India</a
+              >
+              <a
+                href="tel:+910000000000"
+                class="flex items-center gap-2 text-white/70 foot-link"
+                ><i
+                  data-lucide="phone"
+                  class="w-4 h-4 text-brand-orange"
+                ></i>
+                +91 00000 00000</a
+              >
+              <a
+                href="mailto:hello@talentelevate.in"
+                class="flex items-center gap-2 text-white/70 foot-link"
+                ><i
+                  data-lucide="mail"
+                  class="w-4 h-4 text-brand-orange"
+                ></i>
+                hello@talentelevate.in</a
+              >
+              <a
+                href="https://wa.me/910000000000"
+                class="flex items-center gap-2 text-white/70 foot-link"
+                ><i
+                  data-lucide="message-circle"
+                  class="w-4 h-4 text-brand-orange"
+                ></i>
+                WhatsApp us</a
+              >
+            </div>
+          </div>
+
+          <!-- General links -->
+          <div>
+            <h4
+              class="font-display font-bold text-sm uppercase tracking-[0.2em] mb-5 text-white"
+            >
+              Explore
+            </h4>
+            <ul class="space-y-3 text-sm text-white/70">
+              <li><a href="#home" class="foot-link">Home</a></li>
+              <li><a href="#about" class="foot-link">About</a></li>
+              <li><a href="#services" class="foot-link">Services</a></li>
+              <li><a href="#industries" class="foot-link">Industries</a></li>
+              <li><a href="#process" class="foot-link">Our Process</a></li>
+              <li><a href="#insights" class="foot-link">Insights</a></li>
+              <li><a href="#contact" class="foot-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Audience -->
+          <div>
+            <h4
+              class="font-display font-bold text-sm uppercase tracking-[0.2em] mb-5"
+            >
+              For You
+            </h4>
+            <div class="mb-5">
+              <p
+                class="text-xs uppercase tracking-wider text-brand-orange mb-2 font-semibold"
+              >
+                Candidates
+              </p>
+              <ul class="space-y-2 text-sm text-white/70">
+                <li><a href="#" class="foot-link">Submit Resume</a></li>
+                <li><a href="#" class="foot-link">Open Roles</a></li>
+                <li><a href="#" class="foot-link">Career Tips</a></li>
+              </ul>
+            </div>
+            <div>
+              <p
+                class="text-xs uppercase tracking-wider text-brand-orange mb-2 font-semibold"
+              >
+                Employers
+              </p>
+              <ul class="space-y-2 text-sm text-white/70">
+                <li><a href="#" class="foot-link">Post a Vacancy</a></li>
+                <li><a href="#" class="foot-link">Schedule a Call</a></li>
+                <li><a href="#" class="foot-link">Training Programs</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Newsletter / Connect -->
+          <div>
+            <h4
+              class="font-display font-bold text-sm uppercase tracking-[0.2em] mb-5"
+            >
+              Stay in Touch
+            </h4>
+            <p class="text-white/60 text-sm mb-4">
+              Monthly insights on hiring and people development. No spam.
+            </p>
+            <form
+              class="flex flex-col gap-3"
+              onsubmit="event.preventDefault(); this.reset(); alert('Thanks — we will be in touch.');"
+            >
+              <input
+                type="email"
+                required
+                placeholder="you@email.com"
+                class="bg-white/5 border border-white/10 rounded-full px-5 py-3 text-sm placeholder-white/40 focus:outline-none focus:border-brand-orange transition"
+              />
+              <button
+                type="submit"
+                class="btn-glow inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-grad-brand text-white text-sm font-semibold"
+              >
+                Subscribe
+                <i data-lucide="send" class="w-4 h-4 cta-arrow"></i>
+              </button>
+            </form>
+            <div class="mt-6">
+              <p class="text-xs uppercase tracking-wider text-white/50 mb-3">
+                Follow us
+              </p>
+              <div class="flex items-center gap-3 text-white">
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/10 hover:bg-grad-brand transition flex items-center justify-center text-white"
+                  aria-label="LinkedIn"
+                >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/10 hover:bg-grad-brand transition flex items-center justify-center text-white"
+                  aria-label="Instagram"
+                >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.7 3.7 0 0 1-1.38-.9 3.7 3.7 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23-.06-1.27-.07-1.65-.07-4.85s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zM12 0C8.74 0 8.33.01 7.05.07 5.78.13 4.9.33 4.14.63a5.86 5.86 0 0 0-2.13 1.38A5.86 5.86 0 0 0 .63 4.14C.33 4.9.13 5.78.07 7.05.01 8.33 0 8.74 0 12s.01 3.67.07 4.95c.06 1.27.26 2.15.56 2.91a5.86 5.86 0 0 0 1.38 2.13 5.86 5.86 0 0 0 2.13 1.38c.76.3 1.64.5 2.91.56C8.33 23.99 8.74 24 12 24s3.67-.01 4.95-.07c1.27-.06 2.15-.26 2.91-.56a5.86 5.86 0 0 0 2.13-1.38 5.86 5.86 0 0 0 1.38-2.13c.3-.76.5-1.64.56-2.91.06-1.28.07-1.69.07-4.95s-.01-3.67-.07-4.95c-.06-1.27-.26-2.15-.56-2.91a5.86 5.86 0 0 0-1.38-2.13A5.86 5.86 0 0 0 19.86.63C19.1.33 18.22.13 16.95.07 15.67.01 15.26 0 12 0zm0 5.84a6.16 6.16 0 1 0 0 12.32 6.16 6.16 0 0 0 0-12.32zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.85a1.44 1.44 0 1 0 0 2.88 1.44 1.44 0 0 0 0-2.88z"/>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/10 hover:bg-grad-brand transition flex items-center justify-center text-white"
+                  aria-label="X"
+                >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                  </svg>
+                </a>
+                <a
+                  href="#"
+                  class="w-10 h-10 rounded-full bg-white/10 hover:bg-grad-brand transition flex items-center justify-center text-white"
+                  aria-label="Facebook"
+                >
+                  <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                    <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="mt-16 pt-8 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-4 text-sm text-white/50"
+        >
+          <p>
+            © 2026 Talent Elevate Consultancy. All rights reserved.
+          </p>
+          <div class="flex items-center gap-6">
+            <a href="#" class="hover:text-brand-orange transition"
+              >Privacy Policy</a
+            >
+            <a href="#" class="hover:text-brand-orange transition"
+              >Terms of Service</a
+            >
+            <a href="#" class="hover:text-brand-orange transition"
+              >Cookie Policy</a
+            >
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!-- =================== SCRIPTS =================== -->
+    <script src="main.js"></script>
+  </body>
+</html>
