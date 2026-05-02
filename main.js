@@ -1,11 +1,16 @@
-// -------- Loader --------
-      window.addEventListener('load', () => {
-        const loader = document.getElementById('loader');
-        setTimeout(() => {
-          loader.style.opacity = 0;
-          setTimeout(() => loader.remove(), 500);
-        }, 1200);
-      });
+function initApp() {
+      // -------- Loader --------
+      const loader = document.getElementById('loader');
+      if (loader) {
+        const hide = () => {
+          setTimeout(() => {
+            loader.style.opacity = 0;
+            setTimeout(() => loader.remove(), 500);
+          }, 1200);
+        };
+        if (document.readyState === 'complete') hide();
+        else window.addEventListener('load', hide);
+      }
 
       // -------- Lucide icons --------
       lucide.createIcons();
@@ -37,7 +42,8 @@
             if (t) {
               e.preventDefault();
               lenis.scrollTo(t, { offset: -80, duration: 1.4 });
-              document.getElementById('mobileMenu').classList.remove('open');
+              const mm = document.getElementById('mobileMenu');
+              if (mm) mm.classList.remove('open');
             }
           }
         });
@@ -69,10 +75,12 @@
         });
         curSlide = i;
       }
-      setInterval(() => setSlide((curSlide + 1) % slides.length), 5000);
-      dots.forEach((d) =>
-        d.addEventListener('click', () => setSlide(+d.dataset.slide))
-      );
+      if (slides.length) {
+        setInterval(() => setSlide((curSlide + 1) % slides.length), 5000);
+        dots.forEach((d) =>
+          d.addEventListener('click', () => setSlide(+d.dataset.slide))
+        );
+      }
 
       // -------- Reveal on scroll (general) --------
       gsap.utils.toArray('.reveal').forEach((el) => {
@@ -118,17 +126,19 @@
 
       // -------- Sticky nav shadow --------
       const nav = document.getElementById('mainNav');
-      ScrollTrigger.create({
-        start: 'top -50',
-        end: 99999,
-        onUpdate: (self) => {
-          if (self.scroll() > 50) {
-            nav.classList.add('shadow-soft');
-          } else {
-            nav.classList.remove('shadow-soft');
-          }
-        },
-      });
+      if (nav) {
+        ScrollTrigger.create({
+          start: 'top -50',
+          end: 99999,
+          onUpdate: (self) => {
+            if (self.scroll() > 50) {
+              nav.classList.add('shadow-soft');
+            } else {
+              nav.classList.remove('shadow-soft');
+            }
+          },
+        });
+      }
 
       // -------- Active nav link --------
       const sections = ['home', 'about', 'services', 'industries', 'process', 'insights', 'contact'];
@@ -142,7 +152,11 @@
           onToggle: (self) => {
             if (self.isActive) {
               document.querySelectorAll('.nav-link').forEach((l) => {
-                l.classList.toggle('active', l.getAttribute('href') === '#' + id);
+                const href = l.getAttribute('href');
+                l.classList.toggle(
+                  'active',
+                  href === '#' + id || (id === 'about' && href === 'about.html')
+                );
               });
             }
           },
@@ -151,22 +165,27 @@
 
       // -------- Scroll progress bar --------
       const sp = document.getElementById('scrollProgress');
-      window.addEventListener('scroll', () => {
-        const scroll =
-          (document.documentElement.scrollTop /
-            (document.documentElement.scrollHeight -
-              document.documentElement.clientHeight)) *
-          100;
-        sp.style.width = scroll + '%';
-      });
+      if (sp) {
+        window.addEventListener('scroll', () => {
+          const scroll =
+            (document.documentElement.scrollTop /
+              (document.documentElement.scrollHeight -
+                document.documentElement.clientHeight)) *
+            100;
+          sp.style.width = scroll + '%';
+        });
+      }
 
       // -------- Mobile menu --------
-      document.getElementById('menuBtn').addEventListener('click', () => {
-        document.getElementById('mobileMenu').classList.add('open');
-      });
-      document.getElementById('closeMenu').addEventListener('click', () => {
-        document.getElementById('mobileMenu').classList.remove('open');
-      });
+      const menuBtn = document.getElementById('menuBtn');
+      const closeMenu = document.getElementById('closeMenu');
+      const mobileMenu = document.getElementById('mobileMenu');
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener('click', () => mobileMenu.classList.add('open'));
+      }
+      if (closeMenu && mobileMenu) {
+        closeMenu.addEventListener('click', () => mobileMenu.classList.remove('open'));
+      }
 
       // -------- Magnetic / radial glow on cards --------
       document.querySelectorAll('.feat-card').forEach((card) => {
@@ -240,3 +259,12 @@
           scrollTrigger: { trigger: el, start: 'top 88%' },
         });
       });
+}
+
+// Wait for header/footer partials before binding handlers to elements
+// that live inside them (#mainNav, #menuBtn, #mobileMenu, #loader, #scrollProgress).
+if (window.__partialsReady && typeof window.__partialsReady.then === 'function') {
+  window.__partialsReady.then(initApp);
+} else {
+  initApp();
+}

@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Manpower Outsourcing services by Talent Elevate Consultancy. We mobilise quality personnel, manage statutory compliance, payroll and HR, so you can focus on your core business."
+    />
+    <title>Manpower Outsourcing | Talent Elevate Consultancy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+
+    <main class="bg-white">
+      <!-- Hero -->
+      <section class="relative overflow-hidden bg-navy-950 text-white pb-28 md:pb-36">
+        <div
+          class="absolute inset-0 bg-cover bg-center opacity-30"
+          style="background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?auto=format&fit=crop&w=1800&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/95 to-brand-red/50"></div>
+
+        <div class="blob bg-brand-orange/30 w-[420px] h-[420px] -top-32 -right-24"></div>
+        <div class="blob bg-brand-red/25 w-[360px] h-[360px] bottom-[-120px] left-[-80px]" style="animation-delay: -6s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-6 text-xs md:text-sm text-white/60">
+          <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+          <span class="mx-2 text-white/30">/</span>
+          <a href="index.html#services" class="hover:text-brand-orange transition">Our Services</a>
+          <span class="mx-2 text-white/30">/</span>
+          <span class="font-semibold text-white">Manpower Outsourcing</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 md:pt-14 relative">
+          <span class="eyebrow bg-white/10 border-white/20 text-white">Service</span>
+          <h1 class="hero-h1 font-display font-extrabold text-4xl md:text-6xl leading-[1.05] mt-6 max-w-4xl">
+            Manpower Outsourcing.
+            <span class="grad-text">Focus on growth, not headcount</span>.
+          </h1>
+          <p class="text-white/75 text-lg md:text-xl leading-relaxed mt-6 max-w-3xl">
+            We mobilise efficient, quality manpower for your operations and shoulder the hassles of recruitment, payroll, and statutory compliance, so your teams stay lean and your core business stays in focus.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#enquiry" class="btn-glow inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+              Send an Enquiry
+              <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+            </a>
+            <a href="#overview" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating quick-stats card -->
+      <div class="relative max-w-7xl mx-auto px-6 -mt-16 md:-mt-20 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-0 rounded-2xl md:rounded-3xl bg-white border border-navy-100 shadow-soft p-6 md:p-8">
+          <div class="text-center md:text-left md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">100%</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Statutory Compliance</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">PAN India</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Deployment Reach</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">Zero</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Retirement Liability</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">MNCs</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">&amp; Indian Enterprises</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview / Intro -->
+      <section id="overview" class="pt-24 md:pt-32 pb-20 md:pb-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-60 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+            <div class="reveal">
+              <span class="eyebrow">Service Overview</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                Outsourced manpower,
+                <span class="grad-text">on-tap and on-compliance</span>
+              </h2>
+              <p class="mt-6 text-navy-900/70 text-lg leading-relaxed">
+                Outsourcing of manpower has become a common practice for organisations of every size. The constant demand for professionally qualified, skilled human resource, paired with the cost and complexity of selection and screening, makes outsourcing a vital lever for growth.
+              </p>
+              <p class="mt-4 text-navy-900/70 leading-relaxed">
+                Talent Elevate mobilises good quality and quantity of efficient manpower required by clients, ensuring every outsourced employee receives benefits akin to regular employment. Our dedicated team mobilises resources across India for smooth, hassle-free hiring, with our personnel currently serving leading Indian companies and MNCs.
+              </p>
+
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="target" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Core-Business Focus</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">We handle hiring, you scale operations</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="trending-down" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Lean Headcount</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Variable cost in place of fixed payroll</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="shield-check" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Compliance Owned</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">PF, ESI, payroll &amp; statutory filings</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="map-pinned" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Pan-India Mobilisation</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Resources sourced and deployed nationwide</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="relative">
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-orange/15 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-brand-red/15 rounded-full blur-2xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-soft border border-navy-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=85"
+                    alt="Diverse outsourced team handshake"
+                    class="w-full aspect-[4/5] object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-orange font-semibold">Outsourced Workforce</p>
+                    <p class="font-display font-bold text-xl mt-2 leading-tight">Recruit, lease, manage. We own the lifecycle.</p>
+                  </div>
+                </div>
+                <div class="hidden md:flex absolute -left-8 top-10 bg-white rounded-2xl shadow-soft border border-navy-100 p-4 items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center">
+                    <i data-lucide="users-round" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <div class="font-display font-extrabold text-navy-900 text-lg">On our payroll</div>
+                    <div class="text-xs text-navy-900/60">on your assignment</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Benefits split: Client vs Candidate -->
+      <section class="py-20 md:py-28 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">Benefits</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+              A win for clients, a win for <span class="grad-text">candidates</span>
+            </h2>
+            <p class="text-navy-900/65 mt-5 leading-relaxed">
+              Outsourcing only works when both sides benefit. Here is what our model delivers, end to end.
+            </p>
+          </div>
+
+          <div class="grid lg:grid-cols-2 gap-6 mt-14">
+            <!-- Client benefits -->
+            <div class="reveal rounded-3xl bg-white border border-navy-100 p-8 md:p-10 shadow-card">
+              <div class="flex items-center gap-3 mb-6">
+                <div class="w-12 h-12 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="building-2" class="w-6 h-6"></i>
+                </div>
+                <div>
+                  <p class="text-xs uppercase tracking-[0.25em] text-brand-orange font-bold">For Clients</p>
+                  <h3 class="font-display font-bold text-2xl text-navy-900">Benefits of outsourcing</h3>
+                </div>
+              </div>
+              <ul class="space-y-4">
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-navy-900">Focus on core business</p>
+                    <p class="text-sm text-navy-900/65 mt-0.5">Limit headcount and direct energy at the work that grows revenue.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-navy-900">Pressure off your hiring team</p>
+                    <p class="text-sm text-navy-900/65 mt-0.5">We absorb the long, uncertain process of hunting for the right fit.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-navy-900">Economical edge for the company</p>
+                    <p class="text-sm text-navy-900/65 mt-0.5">Convert fixed cost into variable, ramp up and down as workload demands.</p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span class="mt-1 w-6 h-6 rounded-full bg-brand-orange/10 text-brand-orange flex items-center justify-center shrink-0">
+                    <i data-lucide="check" class="w-4 h-4"></i>
+                  </span>
+                  <div>
+                    <p class="font-semibold text-navy-900">Lower retirement &amp; statutory load</p>
+                    <p class="text-sm text-navy-900/65 mt-0.5">No long-tail retirement liability, simpler compliance footprint.</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Candidate benefits -->
+            <div class="reveal rounded-3xl bg-grad-navy text-white border border-navy-800 p-8 md:p-10 shadow-card relative overflow-hidden">
+              <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-brand-orange/25 blur-3xl"></div>
+              <div class="absolute -bottom-16 -left-16 w-64 h-64 rounded-full bg-brand-red/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-center gap-3 mb-6">
+                  <div class="w-12 h-12 rounded-2xl bg-white/15 backdrop-blur text-white flex items-center justify-center border border-white/20">
+                    <i data-lucide="user-round" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <p class="text-xs uppercase tracking-[0.25em] text-brand-orange-light font-bold">For Candidates</p>
+                    <h3 class="font-display font-bold text-2xl">Benefits of outsourcing</h3>
+                  </div>
+                </div>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 w-6 h-6 rounded-full bg-white/15 text-brand-orange-light flex items-center justify-center shrink-0">
+                      <i data-lucide="check" class="w-4 h-4"></i>
+                    </span>
+                    <div>
+                      <p class="font-semibold">Better chances of finding your dream job</p>
+                      <p class="text-sm text-white/70 mt-0.5">Direct access to roles in leading Indian companies and MNCs.</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 w-6 h-6 rounded-full bg-white/15 text-brand-orange-light flex items-center justify-center shrink-0">
+                      <i data-lucide="check" class="w-4 h-4"></i>
+                    </span>
+                    <div>
+                      <p class="font-semibold">Attractive remuneration packages</p>
+                      <p class="text-sm text-white/70 mt-0.5">Industry-aligned salaries with full statutory benefits and protections.</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 w-6 h-6 rounded-full bg-white/15 text-brand-orange-light flex items-center justify-center shrink-0">
+                      <i data-lucide="check" class="w-4 h-4"></i>
+                    </span>
+                    <div>
+                      <p class="font-semibold">Confidence, exposure &amp; recognition</p>
+                      <p class="text-sm text-white/70 mt-0.5">Work alongside seasoned teams on meaningful, large-scale projects.</p>
+                    </div>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="mt-1 w-6 h-6 rounded-full bg-white/15 text-brand-orange-light flex items-center justify-center shrink-0">
+                      <i data-lucide="check" class="w-4 h-4"></i>
+                    </span>
+                    <div>
+                      <p class="font-semibold">Career-grade benefits, akin to regular employment</p>
+                      <p class="text-sm text-white/70 mt-0.5">Outsourced does not mean lesser. Same care, same coverage.</p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Outsourcing Services Offered -->
+      <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal">
+            <div class="max-w-2xl">
+              <span class="eyebrow">Manpower Outsourcing Services</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                Three flexible models to fit
+                <span class="grad-text">your workload</span>
+              </h2>
+            </div>
+            <p class="text-navy-900/65 max-w-md leading-relaxed">
+              Whether you need a single specialist for a year or a contingency squad for a peak season, our outsourcing models flex to match.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6">
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="user-plus" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">01</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Recruit &amp; Lease</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                We recruit and lease employees to your business as per assignment. They work on your projects, sit on our payroll.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="calendar-clock" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">02</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Long-term &amp; Fixed Duration</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Stable, multi-year staffing for ongoing operations or fixed-duration mandates with clear start and end dates.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-grad-navy text-white border border-navy-800 p-7 reveal relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-brand-orange/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between mb-5">
+                  <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur text-white flex items-center justify-center border border-white/20">
+                    <i data-lucide="zap" class="w-7 h-7"></i>
+                  </div>
+                  <span class="font-display font-extrabold text-4xl text-white/15">03</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">Short-term &amp; Contingency</h3>
+                <p class="text-white/75 leading-relaxed text-sm">
+                  Rapid contingency workforce for seasonal peaks, special projects, and unplanned demand spikes, demobilised cleanly when done.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Cover -->
+      <section class="py-20 md:py-28 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">What's Included</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-5">
+              Full-stack outsourcing, no patchwork
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="search-check" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Sourcing &amp; Screening</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Targeted sourcing, technical assessments, behavioural fit, document and reference checks, before anyone reaches your floor.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="file-signature" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Onboarding &amp; Documentation</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Offer letters, contracts, KYC, joining formalities and induction managed end-to-end on our side.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="receipt-indian-rupee" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Payroll &amp; Statutory</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Monthly payroll, PF, ESI, PT, TDS, gratuity, bonus, and statutory filings, accurate and on time.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="heart-pulse" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Benefits &amp; Insurance</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Group medical cover, leave, and welfare benefits configured to match your standards for outsourced employees.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="repeat" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Replacement &amp; Backfill</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Quick replacements within agreed SLAs, so your operations never stall on attrition or attendance gaps.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="bar-chart-3" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Reporting &amp; Governance</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Headcount, attendance, attrition and compliance dashboards, plus monthly reviews with a single point of contact.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="py-20 md:py-28 bg-navy-900 text-white relative overflow-hidden">
+        <div class="blob bg-brand-orange/30 w-[500px] h-[500px] -top-32 right-0"></div>
+        <div class="blob bg-brand-red/20 w-[400px] h-[400px] bottom-0 left-0" style="animation-delay: -5s"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow !text-brand-orange-light !border-white/15 !bg-white/5">How It Works</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl mt-6 leading-tight">
+              From requirement to
+              <span class="grad-text">deployed workforce</span>
+            </h2>
+            <p class="text-white/70 mt-5 text-lg">
+              A simple four-step engagement that keeps you in the loop and us on the hook.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">01</div>
+              <h3 class="font-display font-bold text-lg mb-2">Define</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Roles, headcount, locations, shift patterns, skill bands and budget envelope.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">02</div>
+              <h3 class="font-display font-bold text-lg mb-2">Mobilise</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Source, screen, document checks, offer rollout and onboarding to our payroll.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">03</div>
+              <h3 class="font-display font-bold text-lg mb-2">Operate</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Resources delivered to your assignment, payroll and compliance run by us.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">04</div>
+              <h3 class="font-display font-bold text-lg mb-2">Govern</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Monthly reviews, replacement SLAs, audits and clean exit when assignment ends.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        data-include="partials/industries-strip.html"
+        data-heading='Outsourced workforce, deployed across <span class="grad-text">four core industries</span>'
+        data-healthcare-desc="Clinical, paramedical and allied staff for hospitals, diagnostics and pharma operations."
+        data-bpo-desc="Voice, non-voice and back-office workforces ramped to handle peaks and 24x7 shifts."
+        data-insurance-desc="Sales, operations, claims and back-office headcount with full statutory cover."
+        data-it-desc="Engineering, support and infrastructure roles deployed on long-running mandates."
+      ></div>
+
+      <div
+        data-include="partials/enquiry-form.html"
+        data-title='Tell us about your <span class="grad-text">workforce need</span>'
+        data-intro="Share your role mix and headcount. We'll come back with an outsourcing plan and rate card within 24 hours."
+        data-options='<option value="">-- Select --</option><option>Manpower Outsourcing - Recruit &amp; Lease</option><option>Manpower Outsourcing - Long-term / Fixed Duration</option><option>Manpower Outsourcing - Short-term / Contingency</option><option>Other</option>'
+        data-field2-label="Company"
+        data-field2-placeholder="Your organisation"
+        data-email-placeholder="you@company.com"
+        data-details-placeholder="Roles, headcount, locations, shift pattern, duration, start date..."
+      ></div>
+
+      <div
+        data-include="partials/explore-services.html"
+        data-svc-current="manpower-outsourcing"
+        data-heading='Other ways we can <span class="grad-text">help you hire</span>'
+      ></div>
+
+      <div
+        data-include="partials/cta-band.html"
+        data-eyebrow="Ready to Outsource"
+        data-title='Outsource the hassle. <span class="grad-text">Keep the focus</span>.'
+        data-intro="Tell us your role mix and headcount, we'll come back with an outsourcing plan and rate card within 24 hours."
+        data-cta-label="Send Enquiry"
+      ></div>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

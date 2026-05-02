@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="About Talent Elevate Consultancy, a recruitment partner serving organizations across India and the UAE."
+    />
+    <title>About Us | Talent Elevate Consultancy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+
+    <main id="about" class="bg-white">
+      <!-- Hero -->
+      <section class="relative overflow-hidden bg-navy-950 text-white pb-28 md:pb-36">
+        <div
+          class="absolute inset-0 bg-cover bg-center opacity-30"
+          style="background-image: url('https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=1800&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/95 to-brand-red/50"></div>
+
+        <!-- Decorative blobs -->
+        <div class="blob bg-brand-orange/30 w-[420px] h-[420px] -top-32 -right-24"></div>
+        <div class="blob bg-brand-red/25 w-[360px] h-[360px] bottom-[-120px] left-[-80px]" style="animation-delay: -6s;"></div>
+
+        <!-- Breadcrumb (inside hero, top) -->
+        <div class="relative max-w-7xl mx-auto px-6 pt-6 text-xs md:text-sm text-white/60">
+          <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+          <span class="mx-2 text-white/30">/</span>
+          <span class="font-semibold text-white">About Us</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 md:pt-14 relative">
+          <span class="eyebrow bg-white/10 border-white/20 text-white">About Us</span>
+          <h1 class="hero-h1 font-display font-extrabold text-4xl md:text-6xl leading-[1.05] mt-6 max-w-4xl">
+            Your premier recruitment partner in
+            <span class="grad-text">India and the UAE</span>.
+          </h1>
+          <p class="text-white/75 text-lg md:text-xl leading-relaxed mt-6 max-w-3xl">
+            We connect exceptional talent with visionary enterprises through strategic talent acquisition, disciplined delivery, and long-term partnership.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="index.html#contact" class="btn-glow inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+              Start Hiring With Us
+              <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+            </a>
+            <a href="#story" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              Read Our Story
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating stats card (straddles hero / next section) -->
+      <div class="relative max-w-7xl mx-auto px-6 -mt-16 md:-mt-20 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-0 rounded-2xl md:rounded-3xl bg-white border border-navy-100 shadow-soft p-6 md:p-8">
+          <div class="text-center md:text-left md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">15+</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Years of Trust</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">2</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Countries Served</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">9+</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Industries Covered</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">7</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Service Lines</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Story / Intro -->
+      <section id="story" class="pt-24 md:pt-32 pb-20 md:pb-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-60 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+            <div class="reveal">
+              <span class="eyebrow">Our Story</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                Empowering excellence
+                <span class="grad-text">since 2009</span>
+              </h2>
+              <p class="mt-6 text-navy-900/70 text-lg leading-relaxed">
+                Welcome to <strong class="text-navy-900">Talent Elevate</strong> &mdash; the epitome of recruitment excellence, dedicated to elevating organizations through strategic talent acquisition across India and the United Arab Emirates.
+              </p>
+              <p class="mt-4 text-navy-900/70 leading-relaxed">
+                As your trusted recruitment partner, we specialize in connecting exceptional talent with visionary enterprises, fostering growth, and driving success across every engagement.
+              </p>
+
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="map-pin" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Dual presence</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">India &amp; UAE talent corridors</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Proven track record</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Established 2009, GST registered</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="relative">
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-orange/15 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-brand-red/15 rounded-full blur-2xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-soft border border-navy-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=85"
+                    alt="Business professionals shaking hands"
+                    class="w-full aspect-[4/5] object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-orange font-semibold">Our Promise</p>
+                    <p class="font-display font-bold text-xl mt-2 leading-tight">Where talent meets opportunity &mdash; and stays.</p>
+                  </div>
+                </div>
+                <!-- Floating accent badge -->
+                <div class="hidden md:flex absolute -left-8 top-10 bg-white rounded-2xl shadow-soft border border-navy-100 p-4 items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center">
+                    <i data-lucide="users" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <div class="font-display font-extrabold text-navy-900 text-lg">Trusted partner</div>
+                    <div class="text-xs text-navy-900/60">for ambitious teams</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Mission / Vision / Promise -->
+      <section class="py-16 md:py-20 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">What Drives Us</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-5">
+              Mission, vision &amp; promise
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="target" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Our Mission</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                To elevate organizations through strategic talent acquisition &mdash; pairing exceptional people with visionary enterprises, every single time.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="eye" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Our Vision</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                To be the most trusted recruitment partner in India and the UAE &mdash; the place ambitious teams turn to when getting the hire right truly matters.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="handshake" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Our Promise</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Transparency, integrity, and efficiency &mdash; on every shortlist, every interview, every onboarding. Partnership that outlasts the placement.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Partner with Us -->
+      <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal">
+            <div class="max-w-2xl">
+              <span class="eyebrow">Why Talent Elevate</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                Seven reasons leading teams
+                <span class="grad-text">partner with us</span>
+              </h2>
+            </div>
+            <p class="text-navy-900/65 max-w-md leading-relaxed">
+              Beyond placements, we build long-term partnerships rooted in domain mastery and disciplined delivery.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- 1 -->
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="award" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">01</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Industry Mastery</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Seasoned recruiters with deep knowledge across technology, finance, healthcare, engineering, hospitality, infrastructure, and more.
+              </p>
+            </div>
+
+            <!-- 2 -->
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="globe" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">02</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Global Network</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Strategic presence across India and the UAE &mdash; tapping expansive talent pools and embracing the multicultural pulse of the Gulf.
+              </p>
+            </div>
+
+            <!-- 3 -->
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="settings-2" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">03</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Tailored Solutions</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Personalized recruitment plans built around your roles, culture, and timelines &mdash; from first sourcing call to onboarding day.
+              </p>
+            </div>
+
+            <!-- 4 -->
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="link-2" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">04</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Lasting Partnerships</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                We optimize for the long game &mdash; transparent, efficient relationships that drive mutual growth across hiring cycles.
+              </p>
+            </div>
+
+            <!-- 5 -->
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="compass" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">05</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Strategic Guidance</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Whether scaling a team or pursuing the right career move, we guide every stakeholder toward their version of excellence.
+              </p>
+            </div>
+
+            <!-- 6 -->
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="shield-check" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">06</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Values-Driven Culture</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Integrity, transparency, and efficiency anchor every engagement &mdash; the foundation on which trust is built.
+              </p>
+            </div>
+
+            <!-- 7 -->
+            <div class="feat-card group rounded-3xl bg-grad-navy text-white border border-navy-800 p-7 reveal md:col-span-2 lg:col-span-1 relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-brand-orange/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between mb-5">
+                  <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur text-white flex items-center justify-center border border-white/20">
+                    <i data-lucide="sparkles" class="w-7 h-7"></i>
+                  </div>
+                  <span class="font-display font-extrabold text-4xl text-white/15">07</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">Talent Meets Opportunity</h3>
+                <p class="text-white/75 leading-relaxed text-sm">
+                  This is where the right people and the right roles converge &mdash; turning aspirations into achievements, hire after hire.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Company Snapshot -->
+      <section class="py-20 md:py-28 bg-navy-50/60 border-t border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+            <span class="eyebrow">Company Snapshot</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+              The facts behind
+              <span class="grad-text">Talent Elevate</span>
+            </h2>
+          </div>
+
+          <div class="grid lg:grid-cols-[0.9fr_1.1fr] gap-8">
+            <!-- CEO Spotlight -->
+            <div class="rounded-3xl bg-grad-navy text-white p-8 md:p-10 relative overflow-hidden shadow-soft reveal">
+              <div class="absolute -top-16 -right-16 w-64 h-64 rounded-full bg-brand-orange/25 blur-3xl"></div>
+              <div class="absolute -bottom-12 -left-12 w-56 h-56 rounded-full bg-brand-red/20 blur-3xl"></div>
+              <div class="relative">
+                <span class="inline-flex items-center gap-2 text-xs uppercase tracking-[0.2em] text-brand-orange font-semibold">
+                  <span class="w-6 h-px bg-brand-orange"></span>
+                  Leadership
+                </span>
+                <div class="mt-6 flex items-center gap-5">
+                  <div class="w-20 h-20 rounded-2xl bg-grad-brand flex items-center justify-center shrink-0 shadow-glow">
+                    <span class="font-display font-extrabold text-3xl text-white">MD</span>
+                  </div>
+                  <div>
+                    <h3 class="font-display font-extrabold text-2xl">Mr. Mahesh Dusaj</h3>
+                    <p class="text-white/70 text-sm mt-1">Founder &amp; CEO</p>
+                  </div>
+                </div>
+                <p class="mt-6 text-white/75 leading-relaxed">
+                  Leading Talent Elevate since its founding in 2009, Mahesh has built the firm into a trusted recruitment partner across India and the UAE &mdash; anchored in the values of transparency, integrity, and lasting client partnership.
+                </p>
+                <div class="mt-8 grid grid-cols-2 gap-4 pt-8 border-t border-white/10">
+                  <div>
+                    <div class="text-xs uppercase tracking-wider text-white/55">Established</div>
+                    <div class="font-display font-extrabold text-2xl mt-1">2009</div>
+                  </div>
+                  <div>
+                    <div class="text-xs uppercase tracking-wider text-white/55">Legal Status</div>
+                    <div class="font-display font-extrabold text-base mt-1">Sole Proprietorship</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Snapshot grid -->
+            <div class="grid sm:grid-cols-2 gap-4 reveal">
+              <div class="rounded-2xl bg-white border border-navy-100 p-6 shadow-card hover:border-brand-orange/40 hover:shadow-soft transition">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center">
+                    <i data-lucide="briefcase" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-xs uppercase tracking-wider text-navy-900/55 font-semibold">Business Type</span>
+                </div>
+                <p class="font-display font-bold text-navy-900">Manpower Recruitment Agency</p>
+              </div>
+
+              <div class="rounded-2xl bg-white border border-navy-100 p-6 shadow-card hover:border-brand-orange/40 hover:shadow-soft transition">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center">
+                    <i data-lucide="file-badge" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-xs uppercase tracking-wider text-navy-900/55 font-semibold">GST No.</span>
+                </div>
+                <p class="font-display font-bold text-navy-900 tracking-wide">36ATHPD4454H1ZR</p>
+              </div>
+
+              <div class="rounded-2xl bg-white border border-navy-100 p-6 shadow-card sm:col-span-2 hover:border-brand-orange/40 hover:shadow-soft transition">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center">
+                    <i data-lucide="layers" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-xs uppercase tracking-wider text-navy-900/55 font-semibold">Services We Offer</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Project Staffing</span>
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Contract Staffing</span>
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Permanent Staffing</span>
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Placement Consultant</span>
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Manpower Outsourcing</span>
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Head Hunting</span>
+                  <span class="px-3 py-1.5 rounded-full bg-navy-50 border border-navy-100 text-xs font-semibold text-navy-900">Campus Hiring</span>
+                </div>
+              </div>
+
+              <div class="rounded-2xl bg-white border border-navy-100 p-6 shadow-card sm:col-span-2 hover:border-brand-orange/40 hover:shadow-soft transition">
+                <div class="flex items-center gap-3 mb-3">
+                  <div class="w-10 h-10 rounded-xl bg-brand-orange/10 text-brand-orange flex items-center justify-center">
+                    <i data-lucide="building-2" class="w-5 h-5"></i>
+                  </div>
+                  <span class="text-xs uppercase tracking-wider text-navy-900/55 font-semibold">Industries We Serve</span>
+                </div>
+                <div class="flex flex-wrap gap-2 mt-2">
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">IT &amp; ITES</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">Telecom / ISP</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">Digital Transformation</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">ERP &amp; Consulting</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">Healthcare &amp; Pharma</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">Engineering &amp; Technical</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">Semiconductor</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">Manufacturing</span>
+                  <span class="px-3 py-1.5 rounded-full bg-gradient-to-r from-brand-orange/10 to-brand-red/10 border border-brand-orange/20 text-xs font-semibold text-navy-900">IBFSI</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Band -->
+      <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="relative overflow-hidden rounded-[2rem] bg-grad-navy p-10 md:p-16 text-white shadow-soft">
+            <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand-orange/30 blur-3xl"></div>
+            <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-red/25 blur-3xl"></div>
+            <div class="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+              <div>
+                <span class="eyebrow bg-white/10 border-white/20 text-white">Let's Talk</span>
+                <h2 class="font-display font-extrabold text-3xl md:text-5xl mt-5 leading-[1.1]">
+                  Discover the Talent Elevate
+                  <span class="grad-text">advantage</span>.
+                </h2>
+                <p class="mt-5 text-white/75 text-lg max-w-xl leading-relaxed">
+                  Your unwavering partner for recruitment success in India and the UAE. Let's turn your hiring goals into achievements.
+                </p>
+              </div>
+              <div class="flex flex-col sm:flex-row lg:flex-col gap-3 lg:gap-4">
+                <a href="index.html#contact" class="btn-glow inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+                  Get Started
+                  <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+                </a>
+                <a href="mailto:hello@talentelevate.in" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+                  <i data-lucide="mail" class="w-4 h-4"></i>
+                  hello@talentelevate.in
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

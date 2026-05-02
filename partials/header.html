@@ -1,0 +1,206 @@
+<!-- Loader -->
+<div class="loader-wrap" id="loader">
+  <div class="text-center">
+    <div class="font-display text-3xl font-extrabold text-white mb-5">
+      <span class="grad-text">Talent Elevate</span>
+    </div>
+    <div class="loader-bar"></div>
+    <p class="text-white/50 text-xs tracking-[0.3em] mt-4 uppercase">
+      Train - Transform - Thrive
+    </p>
+  </div>
+</div>
+
+<!-- Scroll progress -->
+<div id="scrollProgress"></div>
+
+<!-- Top utility bar -->
+<div class="hidden md:block bg-navy-900 text-white text-xs relative z-30">
+  <div class="max-w-7xl mx-auto px-6 py-2.5 flex items-center justify-between">
+    <div class="flex items-center gap-6">
+      <span class="flex items-center gap-2">
+        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-brand-orange"></i>
+        Hyderabad, Telangana, India
+      </span>
+      <span class="flex items-center gap-2 text-white/80">
+        <i data-lucide="clock" class="w-3.5 h-3.5 text-brand-orange"></i>
+        Mon-Sat - 9:30 AM - 6:30 PM
+      </span>
+    </div>
+    <div class="flex items-center gap-5">
+      <div class="flex items-center gap-3">
+        <a href="#" class="hover:text-brand-orange transition" aria-label="LinkedIn">
+          <i data-lucide="linkedin" class="w-4 h-4"></i>
+        </a>
+        <a href="#" class="hover:text-brand-orange transition" aria-label="Instagram">
+          <i data-lucide="instagram" class="w-4 h-4"></i>
+        </a>
+        <a href="#" class="hover:text-brand-orange transition" aria-label="X">
+          <i data-lucide="twitter" class="w-4 h-4"></i>
+        </a>
+        <a href="#" class="hover:text-brand-orange transition" aria-label="Facebook">
+          <i data-lucide="facebook" class="w-4 h-4"></i>
+        </a>
+      </div>
+      <span class="h-4 w-px bg-white/20"></span>
+      <div class="flex items-center gap-3">
+        <a href="sms:+910000000000" class="hover:text-brand-orange transition flex items-center gap-1.5">
+          <i data-lucide="message-square" class="w-3.5 h-3.5"></i> SMS
+        </a>
+        <a href="mailto:hello@talentelevate.in" class="hover:text-brand-orange transition flex items-center gap-1.5">
+          <i data-lucide="mail" class="w-3.5 h-3.5"></i> Email
+        </a>
+        <a href="https://wa.me/910000000000" class="hover:text-brand-orange transition flex items-center gap-1.5">
+          <i data-lucide="message-circle" class="w-3.5 h-3.5"></i> WhatsApp
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Main navigation -->
+<header
+  id="mainNav"
+  class="sticky top-0 z-40 bg-white/95 backdrop-blur-xl border-b border-navy-100/60 transition-all"
+>
+  <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+    <a href="index.html" class="flex items-center gap-3 group">
+      <img src="logo.jpeg" alt="Talent Elevate" class="h-14 md:h-16 w-auto object-contain" />
+    </a>
+
+    <!-- Desktop nav -->
+    <nav class="hidden lg:flex items-center gap-8">
+      <a href="index.html#home" class="nav-link text-sm font-semibold text-navy-900" data-active-on="index.html">Home</a>
+      <a href="about.html" class="nav-link text-sm font-semibold text-navy-900" data-active-on="about.html">About</a>
+
+      <!-- Our Services dropdown -->
+      <div class="relative group">
+        <button
+          type="button"
+          class="nav-link text-sm font-semibold text-navy-900 flex items-center gap-1 focus:outline-none"
+          aria-haspopup="true"
+          data-active-on="project-staffing.html contract-staffing.html permanent-staffing.html placement-consultant.html manpower-outsourcing.html"
+        >
+          Our Services
+          <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-hover:rotate-180"></i>
+        </button>
+
+        <div class="absolute left-0 top-full pt-3 invisible opacity-0 translate-y-1 group-hover:visible group-hover:opacity-100 group-hover:translate-y-0 focus-within:visible focus-within:opacity-100 focus-within:translate-y-0 transition duration-200 z-50">
+          <ul class="w-60 bg-white rounded-xl shadow-soft border border-navy-100/70 py-2">
+            <li class="relative group/staffing">
+              <a
+                href="index.html#services"
+                class="flex items-center justify-between px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition"
+              >
+                Staffing
+                <i data-lucide="chevron-right" class="w-4 h-4"></i>
+              </a>
+              <div class="absolute left-full top-0 pl-2 invisible opacity-0 -translate-x-1 group-hover/staffing:visible group-hover/staffing:opacity-100 group-hover/staffing:translate-x-0 transition duration-200">
+                <ul class="w-56 bg-white rounded-xl shadow-soft border border-navy-100/70 py-2">
+                  <li><a href="project-staffing.html" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition" data-active-on="project-staffing.html">Project Staffing</a></li>
+                  <li><a href="contract-staffing.html" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition" data-active-on="contract-staffing.html">Contract Staffing</a></li>
+                  <li><a href="permanent-staffing.html" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition" data-active-on="permanent-staffing.html">Permanent Staffing</a></li>
+                </ul>
+              </div>
+            </li>
+            <li><a href="placement-consultant.html" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition" data-active-on="placement-consultant.html">Placement Consultant</a></li>
+            <li><a href="manpower-outsourcing.html" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition" data-active-on="manpower-outsourcing.html">Manpower Outsourcing</a></li>
+            <li><a href="index.html#services" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition">Head Hunting</a></li>
+            <li><a href="index.html#services" class="block px-5 py-2.5 text-sm font-medium text-navy-900 hover:bg-navy-50 hover:text-brand-orange transition">Campus Hiring</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <a href="index.html#industries" class="nav-link text-sm font-semibold text-navy-900">Industries</a>
+      <a href="index.html#process" class="nav-link text-sm font-semibold text-navy-900">Process</a>
+      <a href="index.html#insights" class="nav-link text-sm font-semibold text-navy-900">Insights</a>
+      <a href="index.html#contact" class="nav-link text-sm font-semibold text-navy-900">Contact</a>
+    </nav>
+
+    <div class="flex items-center gap-3">
+      <button
+        class="hidden md:flex w-10 h-10 items-center justify-center rounded-full bg-navy-50 hover:bg-navy-100 transition"
+        aria-label="Search"
+      >
+        <i data-lucide="search" class="w-4 h-4 text-navy-900"></i>
+      </button>
+      <a
+        href="index.html#contact"
+        class="hidden md:inline-flex btn-glow items-center gap-2 px-5 py-3 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow hover:shadow-glow"
+      >
+        Get Started
+        <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+      </a>
+      <button
+        id="menuBtn"
+        class="lg:hidden w-10 h-10 flex items-center justify-center rounded-full bg-navy-900 text-white"
+        aria-label="Menu"
+      >
+        <i data-lucide="menu" class="w-5 h-5"></i>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- Mobile menu drawer -->
+<div
+  id="mobileMenu"
+  class="mobile-menu fixed inset-y-0 right-0 w-[88%] max-w-sm bg-navy-900 z-50 p-8 lg:hidden"
+>
+  <div class="flex justify-between items-center mb-10">
+    <span class="text-white font-display font-bold text-lg">Menu</span>
+    <button id="closeMenu" class="text-white" aria-label="Close">
+      <i data-lucide="x" class="w-6 h-6"></i>
+    </button>
+  </div>
+  <nav class="flex flex-col gap-6 text-white text-2xl font-display font-bold">
+    <a href="index.html#home" class="hover:text-brand-orange transition">Home</a>
+    <a href="about.html" class="hover:text-brand-orange transition">About</a>
+
+    <details class="group">
+      <summary class="flex items-center justify-between cursor-pointer list-none hover:text-brand-orange transition">
+        <span>Our Services</span>
+        <i data-lucide="chevron-down" class="w-5 h-5 transition-transform group-open:rotate-180"></i>
+      </summary>
+      <div class="mt-4 ml-4 flex flex-col gap-4 text-lg font-semibold">
+        <details class="group/staffing">
+          <summary class="flex items-center justify-between cursor-pointer list-none hover:text-brand-orange transition">
+            <span>Staffing</span>
+            <i data-lucide="chevron-down" class="w-4 h-4 transition-transform group-open/staffing:rotate-180"></i>
+          </summary>
+          <div class="mt-3 ml-4 flex flex-col gap-3 text-base font-medium text-white/80">
+            <a href="project-staffing.html" class="hover:text-brand-orange transition">Project Staffing</a>
+            <a href="contract-staffing.html" class="hover:text-brand-orange transition">Contract Staffing</a>
+            <a href="permanent-staffing.html" class="hover:text-brand-orange transition">Permanent Staffing</a>
+          </div>
+        </details>
+        <a href="placement-consultant.html" class="hover:text-brand-orange transition">Placement Consultant</a>
+        <a href="manpower-outsourcing.html" class="hover:text-brand-orange transition">Manpower Outsourcing</a>
+        <a href="index.html#services" class="hover:text-brand-orange transition">Head Hunting</a>
+        <a href="index.html#services" class="hover:text-brand-orange transition">Campus Hiring</a>
+      </div>
+    </details>
+
+    <a href="index.html#industries" class="hover:text-brand-orange transition">Industries</a>
+    <a href="index.html#process" class="hover:text-brand-orange transition">Process</a>
+    <a href="index.html#insights" class="hover:text-brand-orange transition">Insights</a>
+    <a href="index.html#contact" class="hover:text-brand-orange transition">Contact</a>
+  </nav>
+  <a
+    href="index.html#contact"
+    class="mt-10 inline-flex items-center gap-2 px-6 py-3 rounded-full bg-grad-brand text-white font-semibold"
+  >
+    Get Started <i data-lucide="arrow-right" class="w-4 h-4"></i>
+  </a>
+</div>
+
+<!-- Floating WhatsApp -->
+<a
+  href="https://wa.me/910000000000"
+  target="_blank"
+  class="fixed bottom-6 right-6 z-30 w-14 h-14 bg-green-500 hover:bg-green-600 rounded-full flex items-center justify-center text-white shadow-2xl"
+  aria-label="WhatsApp"
+>
+  <span class="absolute inset-0 rounded-full bg-green-400 pulse-ring"></span>
+  <i data-lucide="message-circle" class="w-6 h-6 relative"></i>
+</a>

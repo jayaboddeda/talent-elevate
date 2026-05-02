@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Contract Staffing services by Talent Elevate Consultancy. Co-employment staffing on third-party payroll, with SLAs from 3 to 11 months across India and the UAE."
+    />
+    <title>Contract Staffing | Talent Elevate Consultancy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+
+    <main class="bg-white">
+      <!-- Hero -->
+      <section class="relative overflow-hidden bg-navy-950 text-white pb-28 md:pb-36">
+        <div
+          class="absolute inset-0 bg-cover bg-center opacity-30"
+          style="background-image: url('https://images.unsplash.com/photo-1450101499163-c8848c66ca85?auto=format&fit=crop&w=1800&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/95 to-brand-red/50"></div>
+
+        <div class="blob bg-brand-orange/30 w-[420px] h-[420px] -top-32 -right-24"></div>
+        <div class="blob bg-brand-red/25 w-[360px] h-[360px] bottom-[-120px] left-[-80px]" style="animation-delay: -6s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-6 text-xs md:text-sm text-white/60">
+          <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+          <span class="mx-2 text-white/30">/</span>
+          <a href="index.html#services" class="hover:text-brand-orange transition">Our Services</a>
+          <span class="mx-2 text-white/30">/</span>
+          <span class="font-semibold text-white">Contract Staffing</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 md:pt-14 relative">
+          <span class="eyebrow bg-white/10 border-white/20 text-white">Service</span>
+          <h1 class="hero-h1 font-display font-extrabold text-4xl md:text-6xl leading-[1.05] mt-6 max-w-4xl">
+            Contract Staffing. Flexible workforce,
+            <span class="grad-text">zero payroll burden</span>.
+          </h1>
+          <p class="text-white/75 text-lg md:text-xl leading-relaxed mt-6 max-w-3xl">
+            On-demand professionals on our payroll, deployed at your end. A clean co-employment model with SLAs from 3 to 11 months, so you scale your team without scaling overhead.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#enquiry" class="btn-glow inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+              Send an Enquiry
+              <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+            </a>
+            <a href="#overview" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating quick-stats card -->
+      <div class="relative max-w-7xl mx-auto px-6 -mt-16 md:-mt-20 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-0 rounded-2xl md:rounded-3xl bg-white border border-navy-100 shadow-soft p-6 md:p-8">
+          <div class="text-center md:text-left md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">3 - 11</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Month SLAs</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">100%</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Compliance Owned</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">4</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Core Industries</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">India + UAE</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Talent Reach</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview / Intro -->
+      <section id="overview" class="pt-24 md:pt-32 pb-20 md:pb-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-60 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+            <div class="reveal">
+              <span class="eyebrow">What Is Contract Staffing</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                A transitory team member on a
+                <span class="grad-text">third-party payroll</span>
+              </h2>
+              <p class="mt-6 text-navy-900/70 text-lg leading-relaxed">
+                Contract staffing is a transitory member of staff working with your organisation while sitting on a third-party payroll. It is an accepted practice in multinational companies globally, and many large Indian entities now staff entire functions or categories of personnel through manpower staffing partners.
+              </p>
+              <p class="mt-4 text-navy-900/70 leading-relaxed">
+                As organisations focus on their core expertise to stay competitive, non-core functions are outsourced. The personnel for these functions are sourced and managed by the staffing partner. Service Level Agreements typically run from three to eleven months, with no friction around hiring, retaining, or releasing manpower.
+              </p>
+
+              <div class="mt-8 rounded-3xl bg-navy-50 border border-navy-100 p-6 md:p-7">
+                <p class="font-display font-bold text-navy-900 text-lg leading-snug">
+                  Contract staffing is a co-employment association between three parties:
+                </p>
+                <ul class="mt-5 space-y-4">
+                  <li class="flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-grad-brand text-white flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">01</span>
+                    <p class="text-navy-900/75 leading-relaxed">
+                      The staffing partner and the client corporation sign a service contract; the personnel and the staffing partner already have a service association.
+                    </p>
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <span class="w-7 h-7 rounded-full bg-grad-brand text-white flex items-center justify-center shrink-0 mt-0.5 text-xs font-bold">02</span>
+                    <p class="text-navy-900/75 leading-relaxed">
+                      The personnel performs the work at the client's end, while remaining on the staffing partner's payroll for compensation, benefits, and statutory compliance.
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="relative">
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-orange/15 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-brand-red/15 rounded-full blur-2xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-soft border border-navy-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1553877522-43269d4ea984?auto=format&fit=crop&w=1000&q=85"
+                    alt="HR partner discussing contract staffing"
+                    class="w-full aspect-[4/5] object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-orange font-semibold">Co-employment</p>
+                    <p class="font-display font-bold text-xl mt-2 leading-tight">Your work, our payroll, fully compliant.</p>
+                  </div>
+                </div>
+                <div class="hidden md:flex absolute -left-8 top-10 bg-white rounded-2xl shadow-soft border border-navy-100 p-4 items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center">
+                    <i data-lucide="file-check-2" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <div class="font-display font-extrabold text-navy-900 text-lg">Statutory</div>
+                    <div class="text-xs text-navy-900/60">compliance owned</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Deliver -->
+      <section class="py-20 md:py-28 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal">
+            <div class="max-w-2xl">
+              <span class="eyebrow">Why Contract Staffing</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                Built for organisations that
+                <span class="grad-text">scale with focus</span>
+              </h2>
+            </div>
+            <p class="text-navy-900/65 max-w-md leading-relaxed">
+              Free your leaders from non-core hiring, payroll, and compliance overhead, and let your team focus on the work that wins.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="sliders" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">01</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Workforce Flexibility</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Add or release headcount as workload changes, without the cost or complexity of permanent hires.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="wallet" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">02</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Predictable Costs</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Convert fixed payroll into a variable, project-linked cost line with transparent monthly billing.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="shield-check" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">03</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Compliance Owned</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                PF, ESI, gratuity, professional tax, and labour law obligations stay with us. You stay focused on output.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="zap" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">04</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Faster Onboarding</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Pre-screened bench plus active sourcing means contracts can be deployed in days, not months.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="repeat" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">05</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Try Before You Convert</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Evaluate fit on the job. Convert strong performers to your permanent roll on agreed terms.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-grad-navy text-white border border-navy-800 p-7 reveal relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-brand-orange/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between mb-5">
+                  <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur text-white flex items-center justify-center border border-white/20">
+                    <i data-lucide="user-check" class="w-7 h-7"></i>
+                  </div>
+                  <span class="font-display font-extrabold text-4xl text-white/15">06</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">Retention Programs</h3>
+                <p class="text-white/75 leading-relaxed text-sm">
+                  Engagement, benefits, and welfare programs that keep contract talent productive and present through the SLA.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Co-employment Model -->
+      <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">Co-employment Model</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-5">
+              Three parties. <span class="grad-text">Clear roles.</span>
+            </h2>
+            <p class="text-navy-900/65 mt-4 leading-relaxed">
+              No grey zones. Each party knows exactly what they own, so the engagement runs cleanly from day one to release.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="building-2" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Client Corporation</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Defines the role, supervises day-to-day work, sets the deliverables, and provides the workplace. No payroll administration on your side.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="briefcase" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Staffing Partner</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Sources, screens, and onboards the personnel. Owns payroll, statutory compliance, benefits, replacements, and the SLA.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="user-round" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Personnel</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Holds an employment contract with the staffing partner, performs work at the client's end, and is paid through the staffing partner.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="py-20 md:py-28 bg-navy-900 text-white relative overflow-hidden">
+        <div class="blob bg-brand-orange/30 w-[500px] h-[500px] -top-32 right-0"></div>
+        <div class="blob bg-brand-red/20 w-[400px] h-[400px] bottom-0 left-0" style="animation-delay: -5s"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow !text-brand-orange-light !border-white/15 !bg-white/5">How It Works</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl mt-6 leading-tight">
+              From SLA to
+              <span class="grad-text">deployed contractor</span>
+            </h2>
+            <p class="text-white/70 mt-5 text-lg">
+              A transparent four-step engagement. Clear timelines, single point of contact, no surprises.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">01</div>
+              <h3 class="font-display font-bold text-lg mb-2">Define SLA</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Role, headcount, duration (3 to 11 months), pay band, and replacement terms locked in writing.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">02</div>
+              <h3 class="font-display font-bold text-lg mb-2">Source &amp; Screen</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Targeted sourcing, technical and behavioural screening, document verification, and reference checks.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">03</div>
+              <h3 class="font-display font-bold text-lg mb-2">Onboard &amp; Deploy</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Contract, payroll setup, statutory enrolment, induction at your end, and Day 1 readiness.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">04</div>
+              <h3 class="font-display font-bold text-lg mb-2">Manage &amp; Renew</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Monthly payroll, performance reviews, replacements within SLA, and renewal or conversion at term-end.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        data-include="partials/industries-strip.html"
+        data-heading='Contract talent, deployed across <span class="grad-text">four core industries</span>'
+        data-healthcare-desc="Certified clinical and allied professionals on contract for hospitals, diagnostics, and pharma teams."
+        data-bpo-desc="Shift-ready voice, non-voice, and back-office contract staff with full payroll and roster management."
+        data-insurance-desc="Underwriting, claims, sales, and operations contractors aligned to seasonal volume and compliance load."
+        data-it-desc="Engineering, infrastructure, and specialised tech roles on flexible contract terms with renewal options."
+      ></div>
+
+      <div
+        data-include="partials/enquiry-form.html"
+        data-title='Tell us about your <span class="grad-text">contract need</span>'
+        data-intro="Share the role, headcount, and SLA window. We'll come back with a shortlist plan and rate card within 24 hours."
+        data-options='<option value="">-- Select --</option><option>Contract Staffing - 3 months</option><option>Contract Staffing - 6 months</option><option>Contract Staffing - 11 months</option><option>Contract to Hire</option><option>Other</option>'
+        data-field2-label="Company"
+        data-field2-placeholder="Your organisation"
+        data-email-placeholder="you@company.com"
+        data-details-placeholder="Roles, headcount, contract duration, location, start date, pay band..."
+      ></div>
+
+      <div
+        data-include="partials/explore-services.html"
+        data-svc-current="contract-staffing"
+        data-heading='Other ways we can <span class="grad-text">help you hire</span>'
+      ></div>
+
+      <div
+        data-include="partials/cta-band.html"
+        data-eyebrow="Ready to Scale"
+        data-title='Variable workforce, <span class="grad-text">fixed quality</span>.'
+        data-intro="Share your contract requirement. We'll come back with a shortlist plan, rate card, and SLA draft within 24 hours."
+        data-cta-label="Send Enquiry"
+      ></div>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

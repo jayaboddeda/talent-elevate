@@ -1,0 +1,176 @@
+<!-- Enquiry Form -->
+<section id="enquiry" class="py-20 md:py-28 bg-white">
+  <div class="max-w-6xl mx-auto px-6">
+    <div class="rounded-[2rem] overflow-hidden border border-navy-100 shadow-soft grid lg:grid-cols-[0.9fr_1.1fr]">
+      <!-- Side panel -->
+      <div class="bg-grad-navy text-white p-10 md:p-12 relative overflow-hidden">
+        <div class="absolute -top-24 -right-24 w-72 h-72 rounded-full bg-brand-orange/30 blur-3xl"></div>
+        <div class="absolute -bottom-24 -left-24 w-80 h-80 rounded-full bg-brand-red/25 blur-3xl"></div>
+        <div class="relative">
+          <span class="eyebrow bg-white/10 border-white/20 text-white">Enquiry Details</span>
+          <h2 class="font-display font-extrabold text-3xl md:text-4xl mt-5 leading-[1.1]">
+            {{title}}
+          </h2>
+          <p class="mt-4 text-white/75 leading-relaxed">
+            {{intro}} Fields marked <span class="text-brand-orange-light">*</span> are mandatory.
+          </p>
+
+          <div class="mt-10 space-y-5 pt-8 border-t border-white/10">
+            <a href="mailto:hello@talentelevate.in" class="flex items-center gap-3 text-white/85 hover:text-brand-orange-light transition">
+              <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center"><i data-lucide="mail" class="w-5 h-5"></i></span>
+              hello@talentelevate.in
+            </a>
+            <a href="tel:+910000000000" class="flex items-center gap-3 text-white/85 hover:text-brand-orange-light transition">
+              <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center"><i data-lucide="phone" class="w-5 h-5"></i></span>
+              +91 00000 00000
+            </a>
+            <div class="flex items-center gap-3 text-white/85">
+              <span class="w-10 h-10 rounded-xl bg-white/10 flex items-center justify-center"><i data-lucide="map-pin" class="w-5 h-5"></i></span>
+              Hyderabad, Telangana, India
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form -->
+      <form
+        class="p-8 md:p-12 bg-white"
+        onsubmit="event.preventDefault(); this.reset(); alert('Thanks - our team will be in touch shortly.');"
+      >
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Enquiry For <span class="text-brand-red">*</span>
+            </label>
+            <select
+              required
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            >
+              {{options}}
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Your Name <span class="text-brand-red">*</span>
+            </label>
+            <input
+              type="text"
+              required
+              placeholder="Full name"
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              {{field2-label}}
+            </label>
+            <input
+              type="text"
+              placeholder="{{field2-placeholder}}"
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Country <span class="text-brand-red">*</span>
+            </label>
+            <select
+              required
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            >
+              <option>India</option>
+              <option>United Arab Emirates</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              City <span class="text-brand-red">*</span>
+            </label>
+            <input
+              type="text"
+              required
+              placeholder="Current city"
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Locality
+            </label>
+            <input
+              type="text"
+              placeholder="Area / locality"
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            />
+          </div>
+
+          <div>
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Email <span class="text-brand-red">*</span>
+            </label>
+            <input
+              type="email"
+              required
+              placeholder="{{email-placeholder}}"
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+            />
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Phone / Mobile <span class="text-brand-red">*</span>
+            </label>
+            <div class="flex gap-3">
+              <input
+                type="text"
+                value="+91"
+                class="w-20 bg-navy-50/60 border border-navy-100 rounded-xl px-3 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+              />
+              <input
+                type="tel"
+                required
+                placeholder="00000 00000"
+                class="flex-1 bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition"
+              />
+            </div>
+          </div>
+
+          <div class="sm:col-span-2">
+            <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">
+              Enquiry Details <span class="text-brand-red">*</span>
+            </label>
+            <textarea
+              required
+              rows="4"
+              placeholder="{{details-placeholder}}"
+              class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition resize-y"
+            ></textarea>
+          </div>
+        </div>
+
+        <div class="mt-7 flex flex-wrap items-center gap-3">
+          <button
+            type="submit"
+            class="btn-glow inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow"
+          >
+            Submit Enquiry
+            <i data-lucide="send" class="w-4 h-4 cta-arrow"></i>
+          </button>
+          <button
+            type="reset"
+            class="inline-flex items-center gap-2 px-7 py-3.5 rounded-full bg-navy-50 hover:bg-navy-100 border border-navy-100 text-navy-900 text-sm font-semibold transition"
+          >
+            <i data-lucide="rotate-ccw" class="w-4 h-4"></i>
+            Reset
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,30 @@
+<!-- CTA Band -->
+<section class="py-20 md:py-24 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+    <div class="relative overflow-hidden rounded-[2rem] bg-grad-navy p-10 md:p-16 text-white shadow-soft">
+      <div class="absolute -top-20 -right-20 w-80 h-80 rounded-full bg-brand-orange/30 blur-3xl"></div>
+      <div class="absolute -bottom-24 -left-24 w-96 h-96 rounded-full bg-brand-red/25 blur-3xl"></div>
+      <div class="relative grid lg:grid-cols-[1.4fr_1fr] gap-10 items-center">
+        <div>
+          <span class="eyebrow bg-white/10 border-white/20 text-white">{{eyebrow}}</span>
+          <h2 class="font-display font-extrabold text-3xl md:text-5xl mt-5 leading-[1.1]">
+            {{title}}
+          </h2>
+          <p class="mt-5 text-white/75 text-lg max-w-xl leading-relaxed">
+            {{intro}}
+          </p>
+        </div>
+        <div class="flex flex-col sm:flex-row lg:flex-col gap-3 lg:gap-4">
+          <a href="#enquiry" class="btn-glow inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+            {{cta-label}}
+            <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+          </a>
+          <a href="mailto:hello@talentelevate.in" class="inline-flex items-center justify-center gap-2 px-7 py-4 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            hello@talentelevate.in
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

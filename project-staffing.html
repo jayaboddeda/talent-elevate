@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Project Staffing services by Talent Elevate Consultancy. Onsite and offsite project teams sourced, screened and deployed across India and the UAE."
+    />
+    <title>Project Staffing | Talent Elevate Consultancy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+
+    <main class="bg-white">
+      <!-- Hero -->
+      <section class="relative overflow-hidden bg-navy-950 text-white pb-28 md:pb-36">
+        <div
+          class="absolute inset-0 bg-cover bg-center opacity-30"
+          style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/95 to-brand-red/50"></div>
+
+        <div class="blob bg-brand-orange/30 w-[420px] h-[420px] -top-32 -right-24"></div>
+        <div class="blob bg-brand-red/25 w-[360px] h-[360px] bottom-[-120px] left-[-80px]" style="animation-delay: -6s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-6 text-xs md:text-sm text-white/60">
+          <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+          <span class="mx-2 text-white/30">/</span>
+          <a href="index.html#services" class="hover:text-brand-orange transition">Our Services</a>
+          <span class="mx-2 text-white/30">/</span>
+          <span class="font-semibold text-white">Project Staffing</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 md:pt-14 relative">
+          <span class="eyebrow bg-white/10 border-white/20 text-white">Service</span>
+          <h1 class="hero-h1 font-display font-extrabold text-4xl md:text-6xl leading-[1.05] mt-6 max-w-4xl">
+            Project Staffing. The right talent,
+            <span class="grad-text">on time, on site</span>.
+          </h1>
+          <p class="text-white/75 text-lg md:text-xl leading-relaxed mt-6 max-w-3xl">
+            From short sprints to multi-year programs, we mobilise screened, role-fit project teams, onsite or offsite, matched to your scope, skills, and timeline.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#enquiry" class="btn-glow inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+              Send an Enquiry
+              <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+            </a>
+            <a href="#overview" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating quick-stats card -->
+      <div class="relative max-w-7xl mx-auto px-6 -mt-16 md:-mt-20 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-0 rounded-2xl md:rounded-3xl bg-white border border-navy-100 shadow-soft p-6 md:p-8">
+          <div class="text-center md:text-left md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">48 hrs</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">First Shortlist</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">Onsite</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">&amp; Offsite Models</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">4</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Core Industries</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">India + UAE</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Talent Reach</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview / Intro -->
+      <section id="overview" class="pt-24 md:pt-32 pb-20 md:pb-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-60 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+            <div class="reveal">
+              <span class="eyebrow">Service Overview</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                Built for delivery,
+                <span class="grad-text">not just hiring</span>
+              </h2>
+              <p class="mt-6 text-navy-900/70 text-lg leading-relaxed">
+                Talent Elevate is conspicuously the best at delightful hiring experiences. Headquartered in the City of Nizams, we partner with you to find the right talent for every project, onsite or offsite, short-term or long-haul, precisely matched to your requirement.
+              </p>
+              <p class="mt-4 text-navy-900/70 leading-relaxed">
+                We are committed to fulfilling multi-skill, multi-role staffing needs across varied projects. We counsel the most suitable candidates for you, and define precise job specifications based on the role, career progression, salary band, and project lifecycle.
+              </p>
+
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="map-pinned" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Onsite + Offsite</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Deploy at your location or ours</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="zap" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Rapid Mobilisation</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Ramp up teams in days, not months</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="layers" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Multi-skill Squads</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Cross-functional project teams</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="user-check" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Role-fit Counselling</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Candidates aligned to scope &amp; growth</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="relative">
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-orange/15 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-brand-red/15 rounded-full blur-2xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-soft border border-navy-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?auto=format&fit=crop&w=1000&q=85"
+                    alt="Project team in a strategy meeting"
+                    class="w-full aspect-[4/5] object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-orange font-semibold">Project Squads</p>
+                    <p class="font-display font-bold text-xl mt-2 leading-tight">Stand-up to handover, we staff the whole arc.</p>
+                  </div>
+                </div>
+                <div class="hidden md:flex absolute -left-8 top-10 bg-white rounded-2xl shadow-soft border border-navy-100 p-4 items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center">
+                    <i data-lucide="users-round" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <div class="font-display font-extrabold text-navy-900 text-lg">Squad ready</div>
+                    <div class="text-xs text-navy-900/60">in 48 hours</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- What We Deliver -->
+      <section class="py-20 md:py-28 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal">
+            <div class="max-w-2xl">
+              <span class="eyebrow">What We Deliver</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                A complete project staffing
+                <span class="grad-text">capability</span>
+              </h2>
+            </div>
+            <p class="text-navy-900/65 max-w-md leading-relaxed">
+              From a single niche specialist to a full multi-disciplinary squad, we engineer the team your project plan actually needs.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="search-check" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">01</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Scope &amp; Skill Mapping</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                We translate your project plan into precise role definitions: skills, seniority, certifications, and shift patterns required for each phase.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="users" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">02</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Squad Composition</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Assemble cross-functional teams of PMs, leads, specialists, and support staff, calibrated to your delivery model and culture.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="rocket" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">03</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Rapid Mobilisation</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Pre-screened bench plus an active sourcing engine means first shortlists in 48 hours and full team rollout within agreed SLAs.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="trending-up" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">04</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Ramp-up &amp; Ramp-down</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Scale headcount to match project lifecycle. Mobilise for delivery peaks, demobilise smoothly post-handover with zero overhead.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="shield-check" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">05</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Compliance &amp; Payroll</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                End-to-end statutory compliance, background checks, payroll, and HR administration, so you stay focused on delivery.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-grad-navy text-white border border-navy-800 p-7 reveal relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-brand-orange/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between mb-5">
+                  <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur text-white flex items-center justify-center border border-white/20">
+                    <i data-lucide="line-chart" class="w-7 h-7"></i>
+                  </div>
+                  <span class="font-display font-extrabold text-4xl text-white/15">06</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">Performance Governance</h3>
+                <p class="text-white/75 leading-relaxed text-sm">
+                  Weekly check-ins, milestone reviews, and replacement guarantees. Performance is tracked, not assumed.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Engagement Models -->
+      <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">Engagement Models</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-5">
+              Three ways we plug into your project
+            </h2>
+          </div>
+          <div class="grid md:grid-cols-3 gap-6 mt-12">
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="building" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Onsite Deployment</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Resources work from your office under your supervision. Ideal for tight collaboration, sensitive systems, and integrated delivery teams.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="laptop" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Offsite / Remote Pods</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Dedicated pods working from our facility or distributed locations, with full output ownership and reduced infrastructure overhead.
+              </p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-8 reveal">
+              <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center mb-5">
+                <i data-lucide="git-merge" class="w-7 h-7"></i>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-3">Hybrid Squads</h3>
+              <p class="text-navy-900/70 leading-relaxed">
+                Mix-and-match models with senior leads onsite and execution teams remote, tuned to your project rhythm and budget.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="py-20 md:py-28 bg-navy-900 text-white relative overflow-hidden">
+        <div class="blob bg-brand-orange/30 w-[500px] h-[500px] -top-32 right-0"></div>
+        <div class="blob bg-brand-red/20 w-[400px] h-[400px] bottom-0 left-0" style="animation-delay: -5s"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow !text-brand-orange-light !border-white/15 !bg-white/5">How It Works</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl mt-6 leading-tight">
+              From brief to
+              <span class="grad-text">deployed team</span>
+            </h2>
+            <p class="text-white/70 mt-5 text-lg">
+              A transparent four-step engagement. Clear timelines, weekly checkpoints, no surprises.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">01</div>
+              <h3 class="font-display font-bold text-lg mb-2">Discover</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Project brief, scope, skill mix, timelines, budget bands, and culture fit.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">02</div>
+              <h3 class="font-display font-bold text-lg mb-2">Source &amp; Screen</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Targeted sourcing, technical screening, behavioural fit, reference and document checks.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">03</div>
+              <h3 class="font-display font-bold text-lg mb-2">Deploy</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Onboarding, compliance setup, kickoff, and squad integration with your delivery cadence.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">04</div>
+              <h3 class="font-display font-bold text-lg mb-2">Govern</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Weekly performance reviews, replacements within SLA, smooth ramp-down at handover.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        data-include="partials/industries-strip.html"
+        data-heading='Project squads, deployed across <span class="grad-text">four core industries</span>'
+        data-healthcare-desc="Certified clinical and allied professionals for hospitals, diagnostics, and pharma projects."
+        data-bpo-desc="Scalable, shift-ready squads for voice, non-voice, and back-office process delivery."
+        data-insurance-desc="Specialists for underwriting, claims, sales, and compliance-heavy project workstreams."
+        data-it-desc="Engineering, infrastructure, and specialised tech roles for software and digital projects."
+      ></div>
+
+      <div
+        data-include="partials/enquiry-form.html"
+        data-title='Tell us about your <span class="grad-text">project</span>'
+        data-intro="Share your scope and skill mix. We'll come back with a shortlist plan within 24 hours."
+        data-options='<option value="">-- Select --</option><option>Project Staffing - Onsite</option><option>Project Staffing - Offsite</option><option>Project Staffing - Hybrid</option><option>Other</option>'
+        data-field2-label="Company"
+        data-field2-placeholder="Your organisation"
+        data-email-placeholder="you@company.com"
+        data-details-placeholder="Roles, headcount, project duration, location preference, start date..."
+      ></div>
+
+      <div
+        data-include="partials/explore-services.html"
+        data-svc-current="project-staffing"
+        data-heading='Other ways we can <span class="grad-text">help you hire</span>'
+      ></div>
+
+      <div
+        data-include="partials/cta-band.html"
+        data-eyebrow="Ready to Mobilise"
+        data-title='Get a project squad in <span class="grad-text">days, not months</span>.'
+        data-intro="Share your scope. We'll come back with a shortlist plan and rate card within 24 hours."
+        data-cta-label="Send Enquiry"
+      ></div>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

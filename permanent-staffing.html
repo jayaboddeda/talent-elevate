@@ -1,0 +1,429 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Permanent Staffing services by Talent Elevate Consultancy. Industry-focused recruitment for software, infrastructure, IT-enabled services, finance, back-office, and HR consulting roles."
+    />
+    <title>Permanent Staffing | Talent Elevate Consultancy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+
+    <main class="bg-white">
+      <!-- Hero -->
+      <section class="relative overflow-hidden bg-navy-950 text-white pb-28 md:pb-36">
+        <div
+          class="absolute inset-0 bg-cover bg-center opacity-30"
+          style="background-image: url('https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1800&q=80');"
+        ></div>
+        <div class="absolute inset-0 bg-gradient-to-br from-navy-950 via-navy-900/95 to-brand-red/50"></div>
+
+        <div class="blob bg-brand-orange/30 w-[420px] h-[420px] -top-32 -right-24"></div>
+        <div class="blob bg-brand-red/25 w-[360px] h-[360px] bottom-[-120px] left-[-80px]" style="animation-delay: -6s;"></div>
+
+        <div class="relative max-w-7xl mx-auto px-6 pt-6 text-xs md:text-sm text-white/60">
+          <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+          <span class="mx-2 text-white/30">/</span>
+          <a href="index.html#services" class="hover:text-brand-orange transition">Our Services</a>
+          <span class="mx-2 text-white/30">/</span>
+          <span class="font-semibold text-white">Permanent Staffing</span>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 md:pt-14 relative">
+          <span class="eyebrow bg-white/10 border-white/20 text-white">Service</span>
+          <h1 class="hero-h1 font-display font-extrabold text-4xl md:text-6xl leading-[1.05] mt-6 max-w-4xl">
+            Permanent Staffing. The people who
+            <span class="grad-text">build your company</span>.
+          </h1>
+          <p class="text-white/75 text-lg md:text-xl leading-relaxed mt-6 max-w-3xl">
+            Hiring on your roll, for the long run. Industry-focused recruitment that finds problem-solvers your team will keep, in software, infrastructure, IT-enabled services, finance, back-office, and HR consulting.
+          </p>
+
+          <div class="mt-10 flex flex-wrap items-center gap-4">
+            <a href="#enquiry" class="btn-glow inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+              Send an Enquiry
+              <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+            </a>
+            <a href="#overview" class="inline-flex items-center gap-2 px-6 py-3.5 rounded-full bg-white/10 hover:bg-white/15 border border-white/20 text-white text-sm font-semibold transition">
+              <i data-lucide="play-circle" class="w-4 h-4"></i>
+              How It Works
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Floating quick-stats card -->
+      <div class="relative max-w-7xl mx-auto px-6 -mt-16 md:-mt-20 z-20">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-0 rounded-2xl md:rounded-3xl bg-white border border-navy-100 shadow-soft p-6 md:p-8">
+          <div class="text-center md:text-left md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">On Roll</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Direct Hires</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">7+</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Functional Profiles</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">4</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">Core Industries</p>
+          </div>
+          <div class="text-center md:text-left md:border-l md:border-navy-100 md:px-6">
+            <div class="font-display font-extrabold text-3xl md:text-4xl grad-text">Best Rates</div>
+            <p class="text-navy-900/60 text-xs md:text-sm mt-1.5 uppercase tracking-wider font-semibold">In The Industry</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Overview / Intro -->
+      <section id="overview" class="pt-24 md:pt-32 pb-20 md:pb-28 bg-white relative overflow-hidden">
+        <div class="absolute inset-0 grid-bg opacity-60 pointer-events-none"></div>
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="grid lg:grid-cols-[1.1fr_0.9fr] gap-14 items-center">
+            <div class="reveal">
+              <span class="eyebrow">Service Overview</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                People are the foundation.
+                <span class="grad-text">We help you choose them.</span>
+              </h2>
+              <p class="mt-6 text-navy-900/70 text-lg leading-relaxed">
+                Permanent staffing is rapidly gaining recognition in the human resource strategy of every organisation today. We firmly believe the foundation of success is laid by the people of the organisation, by overcoming the challenges in their day-to-day work.
+              </p>
+              <p class="mt-4 text-navy-900/70 leading-relaxed">
+                Our consultants are seasoned problem solvers who know how to use technology to your advantage, so you can focus on your core business and trust the hiring to us.
+              </p>
+
+              <div class="mt-8 grid sm:grid-cols-2 gap-4">
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="user-plus" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Direct on Your Roll</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Long-term hires, fully owned by you</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="award" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Industry-Focused</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Domain depth across software &amp; ops</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="trending-up" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Productivity Lift</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">Hires that move the metrics</p>
+                  </div>
+                </div>
+                <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50 border border-navy-100">
+                  <div class="w-10 h-10 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0">
+                    <i data-lucide="badge-percent" class="w-5 h-5"></i>
+                  </div>
+                  <div>
+                    <h4 class="font-display font-bold text-navy-900">Best Service Rates</h4>
+                    <p class="text-sm text-navy-900/65 mt-1">A corner stone of our offer</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <div class="relative">
+                <div class="absolute -top-6 -right-6 w-32 h-32 bg-brand-orange/15 rounded-full blur-2xl"></div>
+                <div class="absolute -bottom-6 -left-6 w-40 h-40 bg-brand-red/15 rounded-full blur-2xl"></div>
+                <div class="relative rounded-3xl overflow-hidden shadow-soft border border-navy-100">
+                  <img
+                    src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1000&q=85"
+                    alt="Hiring partner introducing a candidate"
+                    class="w-full aspect-[4/5] object-cover"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+                  <div class="absolute bottom-6 left-6 right-6 text-white">
+                    <p class="text-xs uppercase tracking-[0.3em] text-brand-orange font-semibold">Strategic Partner</p>
+                    <p class="font-display font-bold text-xl mt-2 leading-tight">Hires that stay, perform, and grow with you.</p>
+                  </div>
+                </div>
+                <div class="hidden md:flex absolute -left-8 top-10 bg-white rounded-2xl shadow-soft border border-navy-100 p-4 items-center gap-3">
+                  <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center">
+                    <i data-lucide="handshake" class="w-6 h-6"></i>
+                  </div>
+                  <div>
+                    <div class="font-display font-extrabold text-navy-900 text-lg">Strategic</div>
+                    <div class="text-xs text-navy-900/60">long-term partner</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Permanent Staffing -->
+      <section class="py-20 md:py-28 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-14 reveal">
+            <div class="max-w-2xl">
+              <span class="eyebrow">Why Talent Elevate</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.1]">
+                What clients tell us about
+                <span class="grad-text">our permanent hires</span>
+              </h2>
+            </div>
+            <p class="text-navy-900/65 max-w-md leading-relaxed">
+              These are the reasons companies stay with us, hire after hire. Each is a promise we hold ourselves to on every engagement.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="search-check" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">01</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Resource Allocation Expertise</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Clients consistently appreciate our skill at placing the right person against the right requirement, including staff augmentation for IT projects.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="sparkles" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">02</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Value-Added, Every Time</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Time and again, we deliver more than a CV pile. Market intel, salary benchmarks, and counsel that shapes the offer you make.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="cpu" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">03</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">IT Solutions Forte</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Our forte is IT solutions. We strive towards raising your productivity and profitability through every hire we close.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="badge-percent" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">04</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Best Service Rates</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Best service rates in the staffing industry have been the corner stone of our company. Quality at a price that respects your budget.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="flex items-start justify-between mb-5">
+                <div class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="target" class="w-7 h-7"></i>
+                </div>
+                <span class="font-display font-extrabold text-4xl text-navy-100 group-hover:text-brand-orange/30 transition">05</span>
+              </div>
+              <h3 class="font-display font-bold text-xl text-navy-900 mb-2">Industry-Focused</h3>
+              <p class="text-navy-900/65 leading-relaxed text-sm">
+                Proven expertise in industry-focused staffing makes us the ideal strategic partner for most of the companies we work with.
+              </p>
+            </div>
+
+            <div class="feat-card group rounded-3xl bg-grad-navy text-white border border-navy-800 p-7 reveal relative overflow-hidden">
+              <div class="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-brand-orange/20 blur-3xl"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between mb-5">
+                  <div class="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur text-white flex items-center justify-center border border-white/20">
+                    <i data-lucide="brain" class="w-7 h-7"></i>
+                  </div>
+                  <span class="font-display font-extrabold text-4xl text-white/15">06</span>
+                </div>
+                <h3 class="font-display font-bold text-xl mb-2">Problem-Solver Consultants</h3>
+                <p class="text-white/75 leading-relaxed text-sm">
+                  Our consultants are skilled problem solvers who know how to use technology to your advantage, so you can focus on your core business.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Profiles We Recruit -->
+      <section class="py-20 md:py-28 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">Profiles We Recruit</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-5">
+              Across functions, <span class="grad-text">across seniority</span>
+            </h2>
+            <p class="text-navy-900/65 mt-4 leading-relaxed">
+              Talent Elevate has serviced hires across a wide spread of profiles. If your role lives in any of these tracks, we have a network for it.
+            </p>
+          </div>
+
+          <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-12">
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center mb-4">
+                <i data-lucide="code-2" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900">Software</h3>
+              <p class="text-navy-900/65 text-sm mt-2 leading-relaxed">Engineering, QA, architects, and product leaders across the build stack.</p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center mb-4">
+                <i data-lucide="server" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900">Infrastructure</h3>
+              <p class="text-navy-900/65 text-sm mt-2 leading-relaxed">Cloud, network, security, SRE, and platform engineering specialists.</p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center mb-4">
+                <i data-lucide="cpu" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900">IT-Enabled Services</h3>
+              <p class="text-navy-900/65 text-sm mt-2 leading-relaxed">ITES delivery, support, and operations talent for scaled service lines.</p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center mb-4">
+                <i data-lucide="line-chart" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900">Finance</h3>
+              <p class="text-navy-900/65 text-sm mt-2 leading-relaxed">Controllers, FP&amp;A, audit, treasury, and finance ops across CTC bands.</p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center mb-4">
+                <i data-lucide="folder-cog" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900">Back-Office Ops</h3>
+              <p class="text-navy-900/65 text-sm mt-2 leading-relaxed">Process, transactions, and admin teams that keep operations humming.</p>
+            </div>
+            <div class="feat-card rounded-3xl bg-white border border-navy-100 p-7 reveal">
+              <div class="w-12 h-12 rounded-xl bg-grad-brand text-white flex items-center justify-center mb-4">
+                <i data-lucide="users-round" class="w-6 h-6"></i>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900">HR Consulting</h3>
+              <p class="text-navy-900/65 text-sm mt-2 leading-relaxed">HRBPs, talent acquisition leads, comp &amp; benefits, and L&amp;D specialists.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Process -->
+      <section class="py-20 md:py-28 bg-navy-900 text-white relative overflow-hidden">
+        <div class="blob bg-brand-orange/30 w-[500px] h-[500px] -top-32 right-0"></div>
+        <div class="blob bg-brand-red/20 w-[400px] h-[400px] bottom-0 left-0" style="animation-delay: -5s"></div>
+
+        <div class="max-w-7xl mx-auto px-6 relative">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow !text-brand-orange-light !border-white/15 !bg-white/5">How It Works</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-5xl mt-6 leading-tight">
+              From job description to
+              <span class="grad-text">offer accepted</span>
+            </h2>
+            <p class="text-white/70 mt-5 text-lg">
+              A transparent four-step engagement. Clear timelines, weekly checkpoints, and a single point of contact.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mt-16">
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">01</div>
+              <h3 class="font-display font-bold text-lg mb-2">Discover</h3>
+              <p class="text-white/70 text-sm leading-relaxed">JD calibration, must-haves, nice-to-haves, comp band, team culture, and reporting line.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">02</div>
+              <h3 class="font-display font-bold text-lg mb-2">Source &amp; Screen</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Targeted sourcing, technical screening, behavioural fit, and reference checks before the shortlist lands with you.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">03</div>
+              <h3 class="font-display font-bold text-lg mb-2">Interview &amp; Offer</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Interview coordination, feedback loops, offer shaping, negotiation support, and counter-offer handling.</p>
+            </div>
+            <div class="reveal rounded-3xl bg-white/5 border border-white/10 backdrop-blur p-7">
+              <div class="font-display font-extrabold text-5xl text-brand-orange mb-4">04</div>
+              <h3 class="font-display font-bold text-lg mb-2">Onboard &amp; Stay</h3>
+              <p class="text-white/70 text-sm leading-relaxed">Notice-period engagement, joining day check-in, and 90-day pulse to make sure the hire sticks.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div
+        data-include="partials/industries-strip.html"
+        data-heading='Permanent hires, deployed across <span class="grad-text">four core industries</span>'
+        data-healthcare-desc="Clinical leaders, allied health, and medtech roles for hospitals and pharma businesses."
+        data-bpo-desc="Operations, training, quality, and team leadership hires for voice and back-office centres."
+        data-insurance-desc="Long-term roles in underwriting, claims, actuarial, sales, and compliance."
+        data-it-desc="Engineering, infrastructure, ITES, and specialised tech roles on your direct payroll."
+      ></div>
+
+      <div
+        data-include="partials/enquiry-form.html"
+        data-title='Tell us about your <span class="grad-text">permanent role</span>'
+        data-intro="Share the role, target comp, and timeline. We'll come back with a sourcing plan and a benchmark within 24 hours."
+        data-options='<option value="">-- Select --</option><option>Permanent Staffing - Software</option><option>Permanent Staffing - Infrastructure</option><option>Permanent Staffing - ITES</option><option>Permanent Staffing - Finance</option><option>Permanent Staffing - Back-Office</option><option>HR Consulting</option><option>Other</option>'
+        data-field2-label="Company"
+        data-field2-placeholder="Your organisation"
+        data-email-placeholder="you@company.com"
+        data-details-placeholder="Role, headcount, target comp band, location, expected start date..."
+      ></div>
+
+      <div
+        data-include="partials/explore-services.html"
+        data-svc-current="permanent-staffing"
+        data-heading='Other ways we can <span class="grad-text">help you hire</span>'
+      ></div>
+
+      <div
+        data-include="partials/cta-band.html"
+        data-eyebrow="Ready to Hire"
+        data-title='Hires that <span class="grad-text">stay and grow</span>.'
+        data-intro="Share your role brief. We'll come back with a sourcing plan, comp benchmark, and a target shortlist date within 24 hours."
+        data-cta-label="Send Enquiry"
+      ></div>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
