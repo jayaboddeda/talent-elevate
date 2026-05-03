@@ -1,0 +1,509 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="How AI is reshaping recruitment in 2026 - what's hype and what's actually working. Insights from the Talent Elevate Consultancy team."
+    />
+    <title>How AI is Reshaping Recruitment in 2026 | Talent Elevate Insights</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .bp-prose {
+        color: rgba(13, 23, 56, 0.78);
+        font-size: 1.0625rem;
+        line-height: 1.75;
+      }
+      .bp-prose > p { margin-top: 1.25rem; }
+      .bp-prose > p:first-child { margin-top: 0; }
+      .bp-prose h2 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 800;
+        font-size: 1.625rem;
+        line-height: 1.2;
+        color: #0d1738;
+        margin-top: 3rem;
+        margin-bottom: 1rem;
+        scroll-margin-top: 8rem;
+      }
+      .bp-prose h3 {
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 800;
+        font-size: 1.25rem;
+        color: #0d1738;
+        margin-top: 2rem;
+        margin-bottom: .75rem;
+      }
+      .bp-prose ul {
+        margin-top: 1rem;
+        list-style: none;
+        padding-left: 0;
+      }
+      .bp-prose ul li {
+        position: relative;
+        padding-left: 1.75rem;
+        margin-top: 0.6rem;
+      }
+      .bp-prose ul li::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0.65rem;
+        width: 0.5rem;
+        height: 0.5rem;
+        border-radius: 999px;
+        background: linear-gradient(135deg, #ff8a3c 0%, #dc2626 100%);
+      }
+      .bp-prose strong { color: #0d1738; font-weight: 700; }
+      .bp-prose a {
+        color: #ea580c;
+        font-weight: 600;
+        text-decoration: underline;
+        text-decoration-color: rgba(255, 138, 60, 0.4);
+        text-underline-offset: 3px;
+      }
+      .bp-prose a:hover { text-decoration-color: #ea580c; }
+      .bp-prose blockquote {
+        margin: 2rem 0;
+        padding: 1.5rem 1.75rem;
+        border-left: 4px solid #ff8a3c;
+        background: rgba(255, 138, 60, 0.06);
+        border-radius: 0 1rem 1rem 0;
+        font-family: "Plus Jakarta Sans", sans-serif;
+        font-weight: 600;
+        font-style: normal;
+        font-size: 1.15rem;
+        line-height: 1.55;
+        color: #0d1738;
+      }
+      .bp-prose figure { margin: 2rem 0; }
+      .bp-prose figure img {
+        border-radius: 1.25rem;
+        width: 100%;
+        height: auto;
+      }
+      .bp-prose figcaption {
+        text-align: center;
+        font-size: 0.85rem;
+        color: rgba(13, 23, 56, 0.55);
+        margin-top: 0.75rem;
+      }
+      .bp-prose hr {
+        border: 0;
+        border-top: 1px dashed rgba(13, 23, 56, 0.15);
+        margin: 2.5rem 0;
+      }
+
+      .bp-toc-link.is-active {
+        color: #ea580c;
+        font-weight: 700;
+      }
+      .bp-toc-link.is-active::before {
+        background: linear-gradient(135deg, #ff8a3c 0%, #dc2626 100%);
+        width: 0.75rem;
+      }
+
+      .bp-progress {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 3px;
+        background: linear-gradient(90deg, #ff8a3c, #dc2626);
+        width: 0%;
+        z-index: 60;
+        transition: width 0.1s linear;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+    <div id="bpProgress" class="bp-progress"></div>
+
+    <main class="bg-white">
+      <!-- Article header -->
+      <article>
+        <header class="bg-white pt-10 md:pt-14">
+          <div class="max-w-3xl mx-auto px-6">
+            <div class="text-xs md:text-sm text-navy-900/55">
+              <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+              <span class="mx-2 text-navy-900/30">/</span>
+              <a href="blog.html" class="hover:text-brand-orange transition">Insights</a>
+              <span class="mx-2 text-navy-900/30">/</span>
+              <span class="font-semibold text-navy-900">Hiring Trends</span>
+            </div>
+
+            <div class="mt-8">
+              <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-[11px] font-bold uppercase tracking-wider" style="background: rgba(255,138,60,0.12); color: #ea580c;">
+                <i data-lucide="trending-up" class="w-3.5 h-3.5"></i> Hiring Trends
+              </span>
+
+              <h1 class="font-display font-extrabold text-3xl md:text-5xl text-navy-900 mt-5 leading-[1.08]">
+                How AI is reshaping recruitment in 2026, what's hype and what's actually working
+              </h1>
+
+              <p class="mt-5 text-lg text-navy-900/65 leading-relaxed">
+                Three years in, the AI-in-hiring conversation has matured. Here's what's actually shifted in screening, sourcing, and candidate experience, and where it still falls flat.
+              </p>
+
+              <div class="mt-8 flex flex-wrap items-center gap-x-6 gap-y-3">
+                <div class="flex items-center gap-3">
+                  <img class="w-11 h-11 rounded-full object-cover border border-navy-100" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=200&q=85" alt="Mahesh Dusaj" />
+                  <div>
+                    <div class="text-sm font-semibold text-navy-900">Mahesh Dusaj</div>
+                    <div class="text-xs text-navy-900/55">Director, Talent Elevate</div>
+                  </div>
+                </div>
+                <span class="hidden md:inline w-px h-8 bg-navy-100"></span>
+                <div class="flex items-center gap-4 text-xs text-navy-900/55">
+                  <span class="inline-flex items-center gap-1.5"><i data-lucide="calendar" class="w-3.5 h-3.5"></i> 02 May 2026</span>
+                  <span class="inline-flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 8 min read</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cover image -->
+          <div class="max-w-5xl mx-auto px-6 mt-10">
+            <figure class="rounded-[1.75rem] overflow-hidden shadow-soft border border-navy-100">
+              <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&w=1600&q=85" alt="AI reshaping recruitment - cover" class="w-full aspect-[16/8] object-cover" />
+            </figure>
+          </div>
+        </header>
+
+        <!-- Body grid: sticky TOC + share rail + content -->
+        <div class="py-14 md:py-20">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-[220px_1fr] gap-10 lg:gap-14">
+
+              <!-- TOC (left, sticky) -->
+              <aside class="hidden lg:block">
+                <div class="sticky top-28">
+                  <div class="text-xs font-bold uppercase tracking-wider text-navy-900/55 mb-4">On this page</div>
+                  <nav class="space-y-2.5 text-sm">
+                    <a href="#section-the-shift" class="bp-toc-link relative flex items-center gap-3 pl-4 text-navy-900/65 hover:text-navy-900 transition">
+                      <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-navy-200 transition-all"></span>
+                      The shift in 2024-2026
+                    </a>
+                    <a href="#section-screening" class="bp-toc-link relative flex items-center gap-3 pl-4 text-navy-900/65 hover:text-navy-900 transition">
+                      <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-navy-200 transition-all"></span>
+                      Where AI helps screening
+                    </a>
+                    <a href="#section-sourcing" class="bp-toc-link relative flex items-center gap-3 pl-4 text-navy-900/65 hover:text-navy-900 transition">
+                      <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-navy-200 transition-all"></span>
+                      Sourcing and outreach
+                    </a>
+                    <a href="#section-experience" class="bp-toc-link relative flex items-center gap-3 pl-4 text-navy-900/65 hover:text-navy-900 transition">
+                      <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-navy-200 transition-all"></span>
+                      Candidate experience
+                    </a>
+                    <a href="#section-fails" class="bp-toc-link relative flex items-center gap-3 pl-4 text-navy-900/65 hover:text-navy-900 transition">
+                      <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-navy-200 transition-all"></span>
+                      Where it still falls flat
+                    </a>
+                    <a href="#section-takeaways" class="bp-toc-link relative flex items-center gap-3 pl-4 text-navy-900/65 hover:text-navy-900 transition">
+                      <span class="absolute left-0 top-1/2 -translate-y-1/2 w-1.5 h-1.5 rounded-full bg-navy-200 transition-all"></span>
+                      Takeaways
+                    </a>
+                  </nav>
+
+                  <div class="mt-10 p-5 rounded-2xl bg-navy-50/60 border border-navy-100">
+                    <div class="text-xs font-bold uppercase tracking-wider text-navy-900/55">Need help hiring?</div>
+                    <p class="mt-2 text-sm text-navy-900/70 leading-relaxed">Tell us the role and timeline, we'll suggest the route.</p>
+                    <a href="contact.html" class="mt-4 inline-flex items-center gap-2 text-sm font-bold text-navy-900 hover:text-brand-orange transition">
+                      Brief us <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+                    </a>
+                  </div>
+                </div>
+              </aside>
+
+              <!-- Article body -->
+              <div class="bp-prose max-w-2xl mx-auto lg:mx-0">
+                <p>
+                  In 2023, every recruitment vendor on a sales call promised "AI-powered hiring." By 2025, the buyers stopped asking what that meant and started asking <strong>which parts actually save time</strong>. Three years on, the conversation has matured, and the honest answer is: some of the promised wins are real, several are still vapor, and a few have created problems no one warned us about.
+                </p>
+                <p>
+                  This piece is what we're seeing across our mandates in IT, BPO, healthcare and insurance, sorted by what works, what doesn't, and what's worth your attention this year.
+                </p>
+
+                <h2 id="section-the-shift">The shift in 2024 - 2026</h2>
+                <p>
+                  Two years ago, AI in recruitment meant a chatbot bolted onto a careers page and a resume parser nobody trusted. Today, the typical stack at a mid-sized employer involves at least three layers:
+                </p>
+                <ul>
+                  <li>An <strong>LLM-powered intake tool</strong> that converts an unstructured JD into structured search criteria.</li>
+                  <li>A <strong>sourcing layer</strong> that semantically matches candidates against the criteria, not just keyword-greps.</li>
+                  <li>An <strong>assistive layer</strong> that drafts outreach, summarises CVs, and prepares interview kits.</li>
+                </ul>
+                <p>
+                  Where these stack together, mandates that used to take a four-week first cycle now close the first calibrated shortlist in seven to ten days. That's the real shift, not the chatbot.
+                </p>
+
+                <figure>
+                  <img src="https://images.unsplash.com/photo-1488229297570-58520851e868?auto=format&fit=crop&w=1400&q=85" alt="Modern recruitment workflow visualization" />
+                  <figcaption>The recruitment stack in 2026 has three working layers: intake, sourcing, and assistance.</figcaption>
+                </figure>
+
+                <h2 id="section-screening">Where AI helps screening</h2>
+                <p>
+                  Screening is where the gains are most measurable. A consultant who used to read 80 CVs to surface a five-person shortlist now reviews 25, because the first pass has been done well. The catch: "done well" is doing a lot of work in that sentence.
+                </p>
+                <p>
+                  In our experience, AI screening adds value when:
+                </p>
+                <ul>
+                  <li>The JD is <strong>already specific</strong> (must-haves, deal-breakers, location flex).</li>
+                  <li>The role has <strong>structured signals</strong> (years, certifications, domains) rather than abstract ones (leadership, judgement).</li>
+                  <li>A human <strong>reviews the reject pile</strong> at least weekly, not just the shortlist.</li>
+                </ul>
+
+                <blockquote>
+                  The AI doesn't replace judgement. It replaces the 80% of the work that didn't need judgement, so judgement actually gets used on the 20% that does.
+                </blockquote>
+
+                <h2 id="section-sourcing">Sourcing and outreach</h2>
+                <p>
+                  Sourcing is where 2026 looks meaningfully different from 2024. Semantic search across multiple databases lets a consultant ask, "find me someone who has migrated a payments platform from monolith to microservices in a regulated environment", and get a usable long-list in minutes.
+                </p>
+                <p>
+                  Outreach has moved too. Generic InMails are dead. The norm now is a short, personalised opener that references something specific, often pre-drafted by an LLM and then edited by the consultant. Reply rates on warm-tone, personalised approaches are running 2 to 3x what they were on copy-paste templates.
+                </p>
+
+                <h3>What's still manual</h3>
+                <p>
+                  The 15-minute "is this person actually open right now" call, that hasn't changed. Neither has reading the room on whether someone is leaving for the right reasons or just running from a bad manager.
+                </p>
+
+                <h2 id="section-experience">Candidate experience</h2>
+                <p>
+                  This is the area where AI's reputation took the biggest hit in 2024 and is slowly being repaired. Candidates remember the auto-rejection sent at 2 AM with no reason. They remember the assessment that asked them to record a video for a faceless model. Trust is fragile.
+                </p>
+                <p>
+                  What's actually working in 2026:
+                </p>
+                <ul>
+                  <li><strong>Status visibility</strong>: candidates can see where they are in the process without emailing a recruiter.</li>
+                  <li><strong>Personalised feedback at rejection</strong>: short, specific notes (drafted by AI, reviewed by a human) instead of silence or canned text.</li>
+                  <li><strong>Asynchronous prep materials</strong>: company briefs, panel introductions, suggested reading, served at the right step.</li>
+                </ul>
+
+                <h2 id="section-fails">Where it still falls flat</h2>
+                <p>
+                  A few things AI has not solved, and probably won't anytime soon:
+                </p>
+                <ul>
+                  <li><strong>Senior leadership search.</strong> Headhunting at the CXO level still depends on relationships, references, and judgement, none of which scale with a model.</li>
+                  <li><strong>Cultural fit.</strong> Models can score against a rubric. They can't tell you whether this person will thrive in your particular team's chaos.</li>
+                  <li><strong>Genuinely niche skills.</strong> When the addressable market is 200 people, a vector search adds little over a phone book.</li>
+                </ul>
+                <p>
+                  And one underrated risk: <strong>over-automated rejections that erode the brand</strong>. Every candidate is a future client, future employee, or future referrer. Treat the rejection email like marketing copy, because it is.
+                </p>
+
+                <h2 id="section-takeaways">Takeaways</h2>
+                <ul>
+                  <li>AI screening is real, but only when the JD and reject-pile review are tight.</li>
+                  <li>Semantic sourcing has changed how niche searches work, faster long-lists, better starting point.</li>
+                  <li>Personalised outreach beats template volume, by a lot.</li>
+                  <li>Senior search and cultural calls are still human work. Don't try to automate them.</li>
+                  <li>Watch the candidate experience, the rejection email is now your most-read piece of brand content.</li>
+                </ul>
+
+                <hr />
+
+                <p>
+                  If you'd like to talk through where AI fits, and where it doesn't, in your hiring stack, <a href="contact.html">drop us a note</a>. We're always happy to compare notes.
+                </p>
+
+                <!-- Share bar -->
+                <div class="mt-12 pt-8 border-t border-navy-100 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-5">
+                  <span class="text-xs font-bold uppercase tracking-wider text-navy-900/55">Share this article</span>
+                  <div class="flex items-center gap-2.5 flex-wrap">
+                    <a href="https://www.linkedin.com/sharing/share-offsite/?url=" target="_blank" rel="noopener" aria-label="Share on LinkedIn" class="w-11 h-11 rounded-full bg-white border border-navy-100 hover:border-brand-orange hover:text-brand-orange text-navy-900 flex items-center justify-center transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.45-2.13 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.38-1.85 3.61 0 4.28 2.38 4.28 5.47v6.27zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45C23.2 24 24 23.23 24 22.28V1.72C24 .77 23.2 0 22.22 0z"/>
+                      </svg>
+                    </a>
+                    <a href="https://twitter.com/intent/tweet?text=How%20AI%20is%20reshaping%20recruitment%20in%202026" target="_blank" rel="noopener" aria-label="Share on X" class="w-11 h-11 rounded-full bg-white border border-navy-100 hover:border-brand-orange hover:text-brand-orange text-navy-900 flex items-center justify-center transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+                      </svg>
+                    </a>
+                    <a href="https://www.facebook.com/sharer/sharer.php?u=" target="_blank" rel="noopener" aria-label="Share on Facebook" class="w-11 h-11 rounded-full bg-white border border-navy-100 hover:border-brand-orange hover:text-brand-orange text-navy-900 flex items-center justify-center transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M24 12.07C24 5.4 18.63 0 12 0S0 5.4 0 12.07C0 18.1 4.39 23.1 10.13 24v-8.44H7.08v-3.49h3.05V9.41c0-3.02 1.79-4.69 4.53-4.69 1.31 0 2.68.24 2.68.24v2.97h-1.51c-1.49 0-1.95.93-1.95 1.89v2.26h3.32l-.53 3.49h-2.79V24C19.61 23.1 24 18.1 24 12.07z"/>
+                      </svg>
+                    </a>
+                    <a href="https://wa.me/?text=Reading%20%22How%20AI%20is%20reshaping%20recruitment%20in%202026%22" target="_blank" rel="noopener" aria-label="Share on WhatsApp" class="w-11 h-11 rounded-full bg-white border border-navy-100 hover:border-brand-orange hover:text-brand-orange text-navy-900 flex items-center justify-center transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51l-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+                      </svg>
+                    </a>
+                    <button type="button" id="bpCopyLink" aria-label="Copy link" class="w-11 h-11 rounded-full bg-white border border-navy-100 hover:border-brand-orange hover:text-brand-orange text-navy-900 flex items-center justify-center transition">
+                      <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/>
+                      </svg>
+                    </button>
+                    <span id="bpCopyToast" class="hidden text-xs font-semibold text-emerald-600 inline-flex items-center gap-1.5">
+                      <svg class="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
+                      Link copied
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Related posts -->
+        <section class="py-16 md:py-20 bg-navy-50/40 border-y border-navy-100">
+          <div class="max-w-7xl mx-auto px-6">
+            <div class="flex items-end justify-between gap-4 mb-10">
+              <div>
+                <span class="eyebrow">Keep Reading</span>
+                <h2 class="font-display font-extrabold text-2xl md:text-3xl text-navy-900 mt-3">More from <span class="grad-text">Insights</span></h2>
+              </div>
+              <a href="blog.html" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-navy-900 hover:text-brand-orange transition">
+                All articles <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+              </a>
+            </div>
+
+            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+              <article class="group rounded-3xl overflow-hidden bg-white border border-navy-100 hover:shadow-soft transition">
+                <a href="blog-post.html" class="block">
+                  <div class="aspect-[16/10] overflow-hidden">
+                    <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=900&q=85" alt="2026 hiring outlook" />
+                  </div>
+                  <div class="p-6">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider" style="background: rgba(255,138,60,0.12); color: #ea580c;">Hiring Trends</span>
+                    <h3 class="font-display font-bold text-lg text-navy-900 mt-3 leading-snug group-hover:text-brand-orange transition">The 2026 Hiring Outlook for India's IT Sector</h3>
+                    <div class="mt-4 flex items-center justify-between text-xs text-navy-900/55">
+                      <span class="inline-flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 6 min read</span>
+                      <span>28 Apr 2026</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="group rounded-3xl overflow-hidden bg-white border border-navy-100 hover:shadow-soft transition">
+                <a href="blog-post.html" class="block">
+                  <div class="aspect-[16/10] overflow-hidden">
+                    <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?auto=format&fit=crop&w=900&q=85" alt="Headhunting vs walk-in" />
+                  </div>
+                  <div class="p-6">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider" style="background: rgba(16,185,129,0.10); color: #059669;">Talent Strategy</span>
+                    <h3 class="font-display font-bold text-lg text-navy-900 mt-3 leading-snug group-hover:text-brand-orange transition">Headhunting vs Walk-In Drives: Picking the Right Route</h3>
+                    <div class="mt-4 flex items-center justify-between text-xs text-navy-900/55">
+                      <span class="inline-flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 7 min read</span>
+                      <span>21 Apr 2026</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+
+              <article class="group rounded-3xl overflow-hidden bg-white border border-navy-100 hover:shadow-soft transition">
+                <a href="blog-post.html" class="block">
+                  <div class="aspect-[16/10] overflow-hidden">
+                    <img loading="lazy" class="w-full h-full object-cover group-hover:scale-105 transition duration-500" src="https://images.unsplash.com/photo-1556761175-4b46a572b786?auto=format&fit=crop&w=900&q=85" alt="BPO hiring trends" />
+                  </div>
+                  <div class="p-6">
+                    <span class="inline-flex items-center px-2.5 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider" style="background: rgba(13,23,56,0.08); color: #0d1738;">Industry Insights</span>
+                    <h3 class="font-display font-bold text-lg text-navy-900 mt-3 leading-snug group-hover:text-brand-orange transition">What BPO Hiring Looks Like After the AI Wave</h3>
+                    <div class="mt-4 flex items-center justify-between text-xs text-navy-900/55">
+                      <span class="inline-flex items-center gap-1.5"><i data-lucide="clock" class="w-3.5 h-3.5"></i> 6 min read</span>
+                      <span>18 Apr 2026</span>
+                    </div>
+                  </div>
+                </a>
+              </article>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+      (function () {
+        // Reading progress bar
+        const bar = document.getElementById('bpProgress');
+        const onScroll = () => {
+          const scrollTop = window.scrollY || document.documentElement.scrollTop;
+          const max = (document.documentElement.scrollHeight - window.innerHeight) || 1;
+          const pct = Math.min(100, Math.max(0, (scrollTop / max) * 100));
+          if (bar) bar.style.width = pct + '%';
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+
+        // TOC active state via IntersectionObserver
+        const headings = document.querySelectorAll('.bp-prose h2[id]');
+        const links = document.querySelectorAll('.bp-toc-link');
+        if (headings.length && links.length) {
+          const linkMap = new Map();
+          links.forEach((l) => {
+            const href = l.getAttribute('href') || '';
+            linkMap.set(href.replace('#', ''), l);
+          });
+
+          const setActive = (id) => {
+            links.forEach((l) => l.classList.remove('is-active'));
+            const l = linkMap.get(id);
+            if (l) l.classList.add('is-active');
+          };
+
+          const obs = new IntersectionObserver(
+            (entries) => {
+              const visible = entries.filter((e) => e.isIntersecting);
+              if (!visible.length) return;
+              visible.sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+              setActive(visible[0].target.id);
+            },
+            { rootMargin: '-30% 0px -55% 0px', threshold: [0, 0.25, 0.5, 0.75, 1] }
+          );
+          headings.forEach((h) => obs.observe(h));
+        }
+
+        // Copy link
+        const copyBtn = document.getElementById('bpCopyLink');
+        const toast = document.getElementById('bpCopyToast');
+        if (copyBtn) {
+          copyBtn.addEventListener('click', async () => {
+            try {
+              await navigator.clipboard.writeText(window.location.href);
+              if (toast) {
+                toast.classList.remove('hidden');
+                setTimeout(() => toast.classList.add('hidden'), 1800);
+              }
+            } catch (_) { /* silent */ }
+          });
+        }
+      })();
+    </script>
+  </body>
+</html>

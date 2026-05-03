@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Post your resume with Talent Elevate Consultancy. Share your profile in three simple steps and let our recruiters connect you with the right opportunities across India."
+    />
+    <title>Post Resume | Talent Elevate Consultancy</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Manrope:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="tailwind-config.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+    <link rel="stylesheet" href="style.css" />
+
+    <style>
+      .pr-hero {
+        background:
+          radial-gradient(900px 500px at 90% -10%, rgba(255, 138, 60, 0.18), transparent 60%),
+          radial-gradient(700px 500px at -10% 110%, rgba(220, 38, 38, 0.14), transparent 60%),
+          linear-gradient(180deg, #fff7ef 0%, #ffffff 100%);
+      }
+      .pr-card-border {
+        background: linear-gradient(135deg, rgba(255, 138, 60, 0.55), rgba(220, 38, 38, 0.4) 50%, rgba(255, 255, 255, 0.4) 100%);
+      }
+      .pr-step-line {
+        background: repeating-linear-gradient(90deg, rgba(13, 23, 56, 0.18) 0 6px, transparent 6px 12px);
+      }
+      .pr-faq[open] .pr-faq-icon { transform: rotate(45deg); }
+      .pr-job-card:hover .pr-job-arrow { transform: translateX(4px); }
+      .pr-marquee {
+        animation: pr-marquee 28s linear infinite;
+      }
+      @keyframes pr-marquee {
+        from { transform: translateY(0); }
+        to   { transform: translateY(-50%); }
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden bg-white">
+    <div data-include="partials/header.html"></div>
+
+    <main class="bg-white">
+      <!-- Action-first hero with embedded multi-step form -->
+      <section class="pr-hero relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6 pt-8 md:pt-10">
+          <div class="text-xs md:text-sm text-navy-900/55">
+            <a href="index.html" class="hover:text-brand-orange transition">Home</a>
+            <span class="mx-2 text-navy-900/30">/</span>
+            <span class="font-semibold text-navy-900">Post Resume</span>
+          </div>
+        </div>
+
+        <div class="max-w-7xl mx-auto px-6 pt-10 pb-16 md:pt-14 md:pb-24">
+          <div class="grid lg:grid-cols-[0.85fr_1.15fr] gap-10 lg:gap-14 items-start">
+
+            <!-- LEFT: Welcome + live job ticker -->
+            <div class="lg:sticky lg:top-28">
+              <span class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white/70 backdrop-blur border border-brand-orange/20 text-xs font-bold uppercase tracking-wider text-brand-orange">
+                <span class="relative flex h-2 w-2">
+                  <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-orange opacity-60"></span>
+                  <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-orange"></span>
+                </span>
+                Recruiters are reviewing today
+              </span>
+
+              <h1 class="font-display font-extrabold text-4xl md:text-5xl text-navy-900 mt-6 leading-[1.05]">
+                Post your resume.
+                <span class="grad-text">Skip the queue.</span>
+              </h1>
+              <p class="mt-5 text-navy-900/65 text-lg leading-relaxed max-w-md">
+                Three short steps. Two minutes. Your profile lands directly with our consultants and gets matched against open mandates, no job-board black hole.
+              </p>
+
+              <!-- Trust pills -->
+              <div class="mt-7 flex flex-wrap gap-2.5">
+                <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-navy-100 text-xs font-semibold text-navy-900">
+                  <i data-lucide="badge-check" class="w-3.5 h-3.5 text-brand-orange"></i> Free to register
+                </span>
+                <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-navy-100 text-xs font-semibold text-navy-900">
+                  <i data-lucide="lock" class="w-3.5 h-3.5 text-brand-orange"></i> 100% Confidential
+                </span>
+                <span class="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-white border border-navy-100 text-xs font-semibold text-navy-900">
+                  <i data-lucide="users" class="w-3.5 h-3.5 text-brand-orange"></i> Verified employers
+                </span>
+              </div>
+
+              <!-- Live job ticker -->
+              <div class="hidden md:block mt-10 relative h-[260px] overflow-hidden rounded-3xl bg-white/60 backdrop-blur border border-navy-100 shadow-card p-4">
+                <div class="flex items-center justify-between px-2 pb-3 border-b border-navy-100">
+                  <span class="text-[11px] font-bold uppercase tracking-wider text-navy-900/55">Open this week</span>
+                  <span class="inline-flex items-center gap-1.5 text-[11px] font-bold text-brand-orange">
+                    <span class="w-1.5 h-1.5 rounded-full bg-brand-orange animate-pulse"></span> Live
+                  </span>
+                </div>
+                <div class="absolute left-4 right-4 top-[60px] bottom-4 overflow-hidden">
+                  <ul class="pr-marquee space-y-3">
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="cpu" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Java Backend Engineer</div>
+                        <div class="text-xs text-navy-900/55">IT &middot; Hyderabad &middot; 4-7 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="headphones" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Customer Service Lead</div>
+                        <div class="text-xs text-navy-900/55">BPO &middot; Bengaluru &middot; 2-5 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="stethoscope" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Clinical Operations Manager</div>
+                        <div class="text-xs text-navy-900/55">Healthcare &middot; Chennai &middot; 6-10 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="shield" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Insurance Sales Manager</div>
+                        <div class="text-xs text-navy-900/55">Insurance &middot; Mumbai &middot; 5-8 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="line-chart" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Data Analyst</div>
+                        <div class="text-xs text-navy-900/55">IT &middot; Pune &middot; 3-6 yrs</div>
+                      </div>
+                    </li>
+                    <!-- Duplicate for seamless loop -->
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="cpu" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Java Backend Engineer</div>
+                        <div class="text-xs text-navy-900/55">IT &middot; Hyderabad &middot; 4-7 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="headphones" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Customer Service Lead</div>
+                        <div class="text-xs text-navy-900/55">BPO &middot; Bengaluru &middot; 2-5 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="stethoscope" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Clinical Operations Manager</div>
+                        <div class="text-xs text-navy-900/55">Healthcare &middot; Chennai &middot; 6-10 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="shield" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Insurance Sales Manager</div>
+                        <div class="text-xs text-navy-900/55">Insurance &middot; Mumbai &middot; 5-8 yrs</div>
+                      </div>
+                    </li>
+                    <li class="flex items-center gap-3 p-3 rounded-2xl bg-navy-50/70">
+                      <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="line-chart" class="w-4 h-4"></i></span>
+                      <div class="min-w-0">
+                        <div class="text-sm font-semibold text-navy-900 truncate">Data Analyst</div>
+                        <div class="text-xs text-navy-900/55">IT &middot; Pune &middot; 3-6 yrs</div>
+                      </div>
+                    </li>
+                  </ul>
+                  <div class="absolute inset-x-0 bottom-0 h-12 bg-gradient-to-t from-white/95 to-transparent pointer-events-none"></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- RIGHT: Multi-step form card -->
+            <div class="rounded-[2rem] p-[2px] pr-card-border shadow-soft">
+              <div class="rounded-[calc(2rem-2px)] bg-white p-6 md:p-10">
+                <!-- Stepper -->
+                <div class="flex items-center justify-between gap-3">
+                  <div class="flex items-center gap-3 md:gap-4 w-full" id="wizardSteps">
+                    <div class="flex items-center gap-2 md:gap-3" data-dot-wrap>
+                      <span data-dot class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-grad-brand text-white shrink-0">1</span>
+                      <span class="hidden sm:inline text-xs md:text-sm font-bold text-navy-900">About You</span>
+                    </div>
+                    <div class="flex-1 h-1 rounded-full bg-navy-50 overflow-hidden">
+                      <div id="wizardBar" class="h-full bg-grad-brand transition-all duration-500" style="width:33%"></div>
+                    </div>
+                    <div class="flex items-center gap-2 md:gap-3" data-dot-wrap>
+                      <span data-dot class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-navy-50 text-navy-900/55 shrink-0">2</span>
+                      <span class="hidden sm:inline text-xs md:text-sm font-bold text-navy-900/55">Career</span>
+                    </div>
+                    <div class="hidden sm:block flex-1 h-1 rounded-full bg-navy-50 overflow-hidden"></div>
+                    <div class="flex items-center gap-2 md:gap-3" data-dot-wrap>
+                      <span data-dot class="w-9 h-9 rounded-full flex items-center justify-center text-sm font-bold bg-navy-50 text-navy-900/55 shrink-0">3</span>
+                      <span class="hidden sm:inline text-xs md:text-sm font-bold text-navy-900/55">Resume</span>
+                    </div>
+                  </div>
+                </div>
+
+                <form id="resumeWizard" class="mt-8" enctype="multipart/form-data" novalidate>
+                  <!-- STEP 1: About You -->
+                  <fieldset data-step class="border-0 p-0 m-0">
+                    <h2 class="font-display font-extrabold text-2xl md:text-3xl text-navy-900">Tell us about you</h2>
+                    <p class="mt-1 text-sm text-navy-900/60">A quick intro so we know how to reach out. <span class="text-brand-red">*</span> are required.</p>
+
+                    <div class="grid sm:grid-cols-2 gap-5 mt-7">
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Your Name <span class="text-brand-red">*</span></label>
+                        <input type="text" required placeholder="Full name" class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition" />
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Gender <span class="text-brand-red">*</span></label>
+                        <div class="flex flex-wrap items-center gap-3">
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="gender" value="Male" required class="accent-brand-orange" checked />
+                            <span class="text-sm font-medium text-navy-900">Male</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="gender" value="Female" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">Female</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="gender" value="Other" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">Other</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Email ID <span class="text-brand-red">*</span></label>
+                        <input type="email" required placeholder="you@example.com" class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition" />
+                      </div>
+
+                      <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Mobile <span class="text-brand-red">*</span></label>
+                        <div class="flex gap-3">
+                          <input type="text" value="+91" class="w-20 bg-navy-50/60 border border-navy-100 rounded-xl px-3 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition" />
+                          <input type="tel" required placeholder="00000 00000" class="flex-1 bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition" />
+                        </div>
+                      </div>
+
+                      <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Country <span class="text-brand-red">*</span></label>
+                        <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                          <option>India</option>
+                          <option>United Arab Emirates</option>
+                          <option>United States</option>
+                          <option>United Kingdom</option>
+                          <option>Singapore</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Current City <span class="text-brand-red">*</span></label>
+                        <input type="text" required placeholder="e.g. Hyderabad" class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition" />
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Current Locality <span class="text-brand-red">*</span></label>
+                        <input type="text" required placeholder="Area / locality" class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition" />
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <!-- STEP 2: Career -->
+                  <fieldset data-step class="border-0 p-0 m-0 hidden">
+                    <h2 class="font-display font-extrabold text-2xl md:text-3xl text-navy-900">Your career</h2>
+                    <p class="mt-1 text-sm text-navy-900/60">Helps us shortlist the roles that genuinely fit.</p>
+
+                    <div class="grid sm:grid-cols-2 gap-5 mt-7">
+                      <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Qualification <span class="text-brand-red">*</span></label>
+                        <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                          <option value="">-- Select Qualification --</option>
+                          <option>10th / SSC</option>
+                          <option>12th / Intermediate</option>
+                          <option>Diploma</option>
+                          <option>B.E. / B.Tech</option>
+                          <option>B.Sc</option>
+                          <option>B.Com</option>
+                          <option>B.A.</option>
+                          <option>BBA</option>
+                          <option>BCA</option>
+                          <option>M.E. / M.Tech</option>
+                          <option>M.Sc</option>
+                          <option>M.Com</option>
+                          <option>MBA / PGDM</option>
+                          <option>MCA</option>
+                          <option>Ph.D</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+
+                      <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Functional Area <span class="text-brand-red">*</span></label>
+                        <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                          <option value="">-- Select Functional Area --</option>
+                          <option>IT / Software</option>
+                          <option>BPO / Customer Service</option>
+                          <option>Sales &amp; Marketing</option>
+                          <option>HR / Recruitment</option>
+                          <option>Finance &amp; Accounts</option>
+                          <option>Healthcare / Medical</option>
+                          <option>Insurance</option>
+                          <option>Engineering / Manufacturing</option>
+                          <option>Education / Training</option>
+                          <option>Operations</option>
+                          <option>Logistics / SCM</option>
+                          <option>Admin / Back Office</option>
+                          <option>Other</option>
+                        </select>
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Total Work Experience <span class="text-brand-red">*</span></label>
+                        <div class="grid grid-cols-2 gap-3">
+                          <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                            <option value="">-- Years --</option>
+                            <option>0</option><option>1</option><option>2</option><option>3</option>
+                            <option>4</option><option>5</option><option>6</option><option>7</option>
+                            <option>8</option><option>9</option><option>10</option><option>11</option>
+                            <option>12</option><option>13</option><option>14</option><option>15</option>
+                            <option>16-20</option><option>20+</option>
+                          </select>
+                          <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                            <option value="">-- Months --</option>
+                            <option>0</option><option>1</option><option>2</option><option>3</option>
+                            <option>4</option><option>5</option><option>6</option><option>7</option>
+                            <option>8</option><option>9</option><option>10</option><option>11</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Current Annual Salary <span class="text-brand-red">*</span></label>
+                        <div class="grid grid-cols-2 gap-3">
+                          <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                            <option value="">-- Lakhs --</option>
+                            <option>0</option><option>1</option><option>2</option><option>3</option>
+                            <option>4</option><option>5</option><option>6</option><option>7</option>
+                            <option>8</option><option>9</option><option>10</option><option>15</option>
+                            <option>20</option><option>25</option><option>30+</option>
+                          </select>
+                          <select required class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 focus:outline-none focus:border-brand-orange focus:bg-white transition">
+                            <option value="">-- Thousands --</option>
+                            <option>0</option><option>10</option><option>20</option><option>30</option>
+                            <option>40</option><option>50</option><option>60</option><option>70</option>
+                            <option>80</option><option>90</option>
+                          </select>
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Notice Period <span class="text-brand-red">*</span></label>
+                        <div class="flex flex-wrap gap-2">
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="notice" value="Immediate" required class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">Immediate</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="notice" value="15 Days" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">15 Days</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="notice" value="1 Month" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">1 Month</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="notice" value="2 Months" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">2 Months</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="notice" value="3 Months" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">3 Months</span>
+                          </label>
+                          <label class="inline-flex items-center gap-2 px-4 py-2.5 rounded-xl bg-navy-50/60 border border-navy-100 cursor-pointer hover:border-brand-orange transition">
+                            <input type="radio" name="notice" value="3+ Months" class="accent-brand-orange" />
+                            <span class="text-sm font-medium text-navy-900">3+ Months</span>
+                          </label>
+                        </div>
+                      </div>
+
+                      <div class="sm:col-span-2">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-navy-900/65 mb-2">Key Skills <span class="text-brand-red">*</span></label>
+                        <textarea required rows="4" placeholder="Comma-separated, e.g. Java, Spring Boot, SQL, Communication, Team Leadership" class="w-full bg-navy-50/60 border border-navy-100 rounded-xl px-4 py-3.5 text-sm text-navy-900 placeholder-navy-900/35 focus:outline-none focus:border-brand-orange focus:bg-white transition resize-y"></textarea>
+                      </div>
+                    </div>
+                  </fieldset>
+
+                  <!-- STEP 3: Resume -->
+                  <fieldset data-step class="border-0 p-0 m-0 hidden">
+                    <h2 class="font-display font-extrabold text-2xl md:text-3xl text-navy-900">Attach your resume</h2>
+                    <p class="mt-1 text-sm text-navy-900/60">Last step. Upload your latest CV and you're done.</p>
+
+                    <label class="mt-7 flex flex-col items-center justify-center gap-3 px-6 py-12 rounded-2xl bg-navy-50/40 border-2 border-dashed border-navy-100 hover:border-brand-orange hover:bg-navy-50/70 transition cursor-pointer text-center">
+                      <span class="w-14 h-14 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                        <i data-lucide="upload-cloud" class="w-7 h-7"></i>
+                      </span>
+                      <div>
+                        <div class="text-base font-display font-bold text-navy-900">Drop your file here or click to browse</div>
+                        <div class="text-xs text-navy-900/60 mt-1">Allowed: .doc, .docx, .rtf, .pdf &middot; Max 2 MB</div>
+                      </div>
+                      <input id="resumeFile" type="file" required accept=".doc,.docx,.rtf,.pdf" class="hidden" />
+                      <span id="resumeFileName" class="hidden mt-2 inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-white border border-navy-100 text-xs font-semibold text-navy-900"></span>
+                    </label>
+
+                    <div class="mt-6 grid sm:grid-cols-2 gap-3">
+                      <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50/60 border border-navy-100">
+                        <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="shield-check" class="w-5 h-5"></i></span>
+                        <div>
+                          <div class="text-sm font-display font-bold text-navy-900">Confidential</div>
+                          <div class="text-xs text-navy-900/60 mt-0.5">Shared only with relevant recruiters.</div>
+                        </div>
+                      </div>
+                      <div class="flex items-start gap-3 p-4 rounded-2xl bg-navy-50/60 border border-navy-100">
+                        <span class="w-9 h-9 rounded-xl bg-grad-brand text-white flex items-center justify-center shrink-0"><i data-lucide="bell-ring" class="w-5 h-5"></i></span>
+                        <div>
+                          <div class="text-sm font-display font-bold text-navy-900">Stay informed</div>
+                          <div class="text-xs text-navy-900/60 mt-0.5">We'll email you when a matching role opens.</div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <label class="mt-5 flex items-start gap-3 cursor-pointer">
+                      <input type="checkbox" required class="mt-1 accent-brand-orange w-4 h-4" />
+                      <span class="text-xs text-navy-900/70">I agree to be contacted by Talent Elevate Consultancy regarding suitable opportunities and consent to my profile being shared with relevant employers.</span>
+                    </label>
+                  </fieldset>
+
+                  <!-- Wizard nav -->
+                  <div class="mt-8 pt-6 border-t border-navy-100 flex items-center justify-between gap-3">
+                    <button type="button" id="wizBack" class="invisible inline-flex items-center gap-2 px-5 py-3 rounded-full bg-navy-50 hover:bg-navy-100 border border-navy-100 text-navy-900 text-sm font-semibold transition">
+                      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+                      Back
+                    </button>
+                    <div class="text-xs font-semibold text-navy-900/55"><span id="wizCurrent">1</span> of 3</div>
+                    <button type="button" id="wizNext" class="btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+                      Continue
+                      <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+                    </button>
+                    <button type="submit" id="wizSubmit" class="hidden btn-glow inline-flex items-center gap-2 px-6 py-3 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+                      Submit Resume
+                      <i data-lucide="send" class="w-4 h-4 cta-arrow"></i>
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Where you could land — job-board style category grid -->
+      <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-5 mb-10">
+            <div class="max-w-2xl reveal">
+              <span class="eyebrow">Where you could land</span>
+              <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-4 leading-[1.15]">
+                Open hiring across <span class="grad-text">our four core verticals</span>
+              </h2>
+            </div>
+            <a href="mailto:hello@talentelevate.in" class="hidden md:inline-flex items-center gap-2 text-sm font-semibold text-navy-900 hover:text-brand-orange transition">
+              Talk to a consultant
+              <i data-lucide="arrow-right" class="w-4 h-4 cta-arrow"></i>
+            </a>
+          </div>
+
+          <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-5">
+            <a href="#post-resume-form" class="pr-job-card group rounded-3xl bg-navy-50/40 hover:bg-white border border-navy-100 hover:border-brand-orange/40 hover:shadow-soft p-6 transition reveal">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="cpu" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">28+ open</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900 mt-5">IT &amp; Software</h3>
+              <p class="text-sm text-navy-900/60 mt-1.5 leading-relaxed">Engineering, data, infra, and product roles for product and services firms.</p>
+              <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900">
+                Apply with this profile
+                <i data-lucide="arrow-right" class="w-4 h-4 pr-job-arrow transition"></i>
+              </div>
+            </a>
+
+            <a href="#post-resume-form" class="pr-job-card group rounded-3xl bg-navy-50/40 hover:bg-white border border-navy-100 hover:border-brand-orange/40 hover:shadow-soft p-6 transition reveal">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="headphones" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">42+ open</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900 mt-5">BPO &amp; Customer Ops</h3>
+              <p class="text-sm text-navy-900/60 mt-1.5 leading-relaxed">Voice, non-voice, back-office, and team-lead positions across major centres.</p>
+              <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900">
+                Apply with this profile
+                <i data-lucide="arrow-right" class="w-4 h-4 pr-job-arrow transition"></i>
+              </div>
+            </a>
+
+            <a href="#post-resume-form" class="pr-job-card group rounded-3xl bg-navy-50/40 hover:bg-white border border-navy-100 hover:border-brand-orange/40 hover:shadow-soft p-6 transition reveal">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="stethoscope" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">19+ open</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900 mt-5">Healthcare</h3>
+              <p class="text-sm text-navy-900/60 mt-1.5 leading-relaxed">Clinical, allied health, biomed, and hospital operations roles.</p>
+              <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900">
+                Apply with this profile
+                <i data-lucide="arrow-right" class="w-4 h-4 pr-job-arrow transition"></i>
+              </div>
+            </a>
+
+            <a href="#post-resume-form" class="pr-job-card group rounded-3xl bg-navy-50/40 hover:bg-white border border-navy-100 hover:border-brand-orange/40 hover:shadow-soft p-6 transition reveal">
+              <div class="flex items-center justify-between">
+                <div class="w-12 h-12 rounded-2xl bg-grad-brand text-white flex items-center justify-center">
+                  <i data-lucide="shield" class="w-6 h-6"></i>
+                </div>
+                <span class="text-xs font-bold uppercase tracking-wider text-brand-orange">23+ open</span>
+              </div>
+              <h3 class="font-display font-bold text-lg text-navy-900 mt-5">Insurance</h3>
+              <p class="text-sm text-navy-900/60 mt-1.5 leading-relaxed">Sales, ops, underwriting, and analytics across leading insurers.</p>
+              <div class="mt-5 inline-flex items-center gap-2 text-sm font-semibold text-navy-900">
+                Apply with this profile
+                <i data-lucide="arrow-right" class="w-4 h-4 pr-job-arrow transition"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Horizontal "What happens next" timeline -->
+      <section class="py-20 md:py-24 bg-navy-50/60 border-y border-navy-100">
+        <div class="max-w-7xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">What happens after you apply</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-4">
+              From submit to <span class="grad-text">first interview</span>
+            </h2>
+            <p class="mt-4 text-navy-900/65 text-base">
+              No black hole. You'll hear back within 48 working hours, even if it's a polite "not this time".
+            </p>
+          </div>
+
+          <div class="relative mt-14">
+            <!-- Connecting dashed line (desktop) -->
+            <div class="hidden md:block absolute top-7 left-[10%] right-[10%] h-px pr-step-line"></div>
+
+            <ol class="grid md:grid-cols-4 gap-8 md:gap-4 relative">
+              <li class="text-center reveal">
+                <div class="mx-auto w-14 h-14 rounded-full bg-white border-2 border-brand-orange text-brand-orange flex items-center justify-center font-display font-extrabold text-lg shadow-card">01</div>
+                <h3 class="font-display font-bold text-navy-900 mt-5">You apply</h3>
+                <p class="text-sm text-navy-900/60 mt-2 leading-relaxed max-w-[220px] mx-auto">Three steps, two minutes. Profile + CV land in our consultant queue.</p>
+              </li>
+              <li class="text-center reveal">
+                <div class="mx-auto w-14 h-14 rounded-full bg-white border-2 border-brand-orange text-brand-orange flex items-center justify-center font-display font-extrabold text-lg shadow-card">02</div>
+                <h3 class="font-display font-bold text-navy-900 mt-5">We review</h3>
+                <p class="text-sm text-navy-900/60 mt-2 leading-relaxed max-w-[220px] mx-auto">Match against live mandates by skills, experience, location, and notice.</p>
+              </li>
+              <li class="text-center reveal">
+                <div class="mx-auto w-14 h-14 rounded-full bg-white border-2 border-brand-orange text-brand-orange flex items-center justify-center font-display font-extrabold text-lg shadow-card">03</div>
+                <h3 class="font-display font-bold text-navy-900 mt-5">Briefing call</h3>
+                <p class="text-sm text-navy-900/60 mt-2 leading-relaxed max-w-[220px] mx-auto">15-min call: the role, the company, the panel, and the comp range.</p>
+              </li>
+              <li class="text-center reveal">
+                <div class="mx-auto w-14 h-14 rounded-full bg-grad-brand text-white flex items-center justify-center font-display font-extrabold text-lg shadow-glow">04</div>
+                <h3 class="font-display font-bold text-navy-900 mt-5">Interview &amp; offer</h3>
+                <p class="text-sm text-navy-900/60 mt-2 leading-relaxed max-w-[220px] mx-auto">Schedule, prep, follow-up, and offer negotiation, end-to-end.</p>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </section>
+
+      <!-- Placement story -->
+      <section class="py-20 md:py-24 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="grid lg:grid-cols-[0.4fr_0.6fr] gap-10 items-center">
+            <div class="relative reveal">
+              <div class="absolute -top-4 -right-4 w-28 h-28 rounded-full bg-brand-orange/15 blur-2xl"></div>
+              <div class="absolute -bottom-4 -left-4 w-32 h-32 rounded-full bg-brand-red/15 blur-2xl"></div>
+              <div class="relative rounded-3xl overflow-hidden border border-navy-100 shadow-soft">
+                <img src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=85" alt="Recently placed candidate" class="w-full aspect-[4/5] object-cover" />
+                <div class="absolute inset-0 bg-gradient-to-t from-navy-950/70 via-transparent to-transparent"></div>
+                <div class="absolute bottom-5 left-5 right-5 text-white">
+                  <div class="text-xs uppercase tracking-[0.3em] text-brand-orange-light font-bold">Placement Story</div>
+                  <div class="font-display font-bold text-lg mt-1.5">Priya R. &middot; Senior QA Lead</div>
+                  <div class="text-xs text-white/75">Placed at a global insurance major, Hyderabad</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="reveal">
+              <i data-lucide="quote" class="w-10 h-10 text-brand-orange"></i>
+              <p class="mt-4 font-display font-bold text-2xl md:text-3xl text-navy-900 leading-snug">
+                "I posted my resume on a Wednesday. By Friday I had a call, by the next Friday I had an offer in hand, and a 38% hike."
+              </p>
+              <p class="mt-5 text-navy-900/65 leading-relaxed">
+                Priya was switching out of a long stint and unsure where to look. The Talent Elevate team filtered down to two roles that genuinely fit, prepped her for the panel, and helped her negotiate joining bonus and notice buy-out. Total time: 11 working days.
+              </p>
+
+              <div class="mt-7 grid grid-cols-3 gap-4">
+                <div>
+                  <div class="font-display font-extrabold text-2xl grad-text">11 days</div>
+                  <div class="text-xs text-navy-900/60 mt-1 uppercase tracking-wider font-semibold">Apply to offer</div>
+                </div>
+                <div>
+                  <div class="font-display font-extrabold text-2xl grad-text">38%</div>
+                  <div class="text-xs text-navy-900/60 mt-1 uppercase tracking-wider font-semibold">Salary hike</div>
+                </div>
+                <div>
+                  <div class="font-display font-extrabold text-2xl grad-text">2 roles</div>
+                  <div class="text-xs text-navy-900/60 mt-1 uppercase tracking-wider font-semibold">Shortlisted</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ accordion -->
+      <section class="py-20 md:py-24 bg-navy-50/60 border-t border-navy-100">
+        <div class="max-w-4xl mx-auto px-6">
+          <div class="text-center max-w-2xl mx-auto reveal">
+            <span class="eyebrow">Quick Answers</span>
+            <h2 class="font-display font-extrabold text-3xl md:text-4xl text-navy-900 mt-4">
+              Things candidates <span class="grad-text">usually ask</span>
+            </h2>
+          </div>
+
+          <div class="mt-10 space-y-3">
+            <details class="pr-faq group bg-white rounded-2xl border border-navy-100 px-6 py-5 reveal">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-display font-bold text-navy-900">Is there any charge to register?</span>
+                <span class="pr-faq-icon w-8 h-8 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center transition-transform"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </summary>
+              <p class="mt-4 text-navy-900/65 text-sm leading-relaxed">No. Posting your resume with Talent Elevate is completely free for candidates. We're paid by the hiring company once you're successfully placed.</p>
+            </details>
+
+            <details class="pr-faq group bg-white rounded-2xl border border-navy-100 px-6 py-5 reveal">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-display font-bold text-navy-900">Will my current employer find out I'm exploring?</span>
+                <span class="pr-faq-icon w-8 h-8 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center transition-transform"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </summary>
+              <p class="mt-4 text-navy-900/65 text-sm leading-relaxed">No. We never share your profile with your current employer or with companies you flag. You can also tell us specific organisations to exclude.</p>
+            </details>
+
+            <details class="pr-faq group bg-white rounded-2xl border border-navy-100 px-6 py-5 reveal">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-display font-bold text-navy-900">How fast will I hear back?</span>
+                <span class="pr-faq-icon w-8 h-8 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center transition-transform"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </summary>
+              <p class="mt-4 text-navy-900/65 text-sm leading-relaxed">You'll hear from us within 48 working hours, either with a matching role or a clear note that we're holding your profile until something fits.</p>
+            </details>
+
+            <details class="pr-faq group bg-white rounded-2xl border border-navy-100 px-6 py-5 reveal">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-display font-bold text-navy-900">What file formats can I upload?</span>
+                <span class="pr-faq-icon w-8 h-8 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center transition-transform"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </summary>
+              <p class="mt-4 text-navy-900/65 text-sm leading-relaxed">We accept .doc, .docx, .rtf, and .pdf files up to 2 MB. PDF is preferred for consistent formatting on the recruiter's side.</p>
+            </details>
+
+            <details class="pr-faq group bg-white rounded-2xl border border-navy-100 px-6 py-5 reveal">
+              <summary class="flex items-center justify-between cursor-pointer list-none">
+                <span class="font-display font-bold text-navy-900">Can I update my profile later?</span>
+                <span class="pr-faq-icon w-8 h-8 rounded-full bg-navy-50 text-navy-900 flex items-center justify-center transition-transform"><i data-lucide="plus" class="w-4 h-4"></i></span>
+              </summary>
+              <p class="mt-4 text-navy-900/65 text-sm leading-relaxed">Yes, just submit again or email your updated CV to <a href="mailto:hello@talentelevate.in" class="text-brand-orange font-semibold">hello@talentelevate.in</a> with your name in the subject line.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slim outro strip -->
+      <section class="py-16 md:py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-6">
+          <div class="rounded-3xl border border-navy-100 bg-navy-50/40 p-8 md:p-10 grid md:grid-cols-[1fr_auto] items-center gap-6">
+            <div>
+              <h3 class="font-display font-extrabold text-2xl md:text-3xl text-navy-900">Prefer to email your resume?</h3>
+              <p class="mt-2 text-navy-900/65 text-sm md:text-base">Send your CV with a one-line note about the kind of role you're after, and we'll take it from there.</p>
+            </div>
+            <div class="flex flex-wrap gap-3">
+              <a href="mailto:hello@talentelevate.in" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-white border border-navy-100 hover:border-brand-orange text-navy-900 text-sm font-semibold transition">
+                <i data-lucide="mail" class="w-4 h-4"></i>
+                hello@talentelevate.in
+              </a>
+              <a href="https://wa.me/910000000000" target="_blank" rel="noopener" class="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-grad-brand text-white text-sm font-semibold shadow-glow">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                Chat on WhatsApp
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <div data-include="partials/footer.html"></div>
+
+    <script src="includes.js"></script>
+    <script src="main.js"></script>
+
+    <script>
+      (function () {
+        const form = document.getElementById('resumeWizard');
+        if (!form) return;
+        const steps = form.querySelectorAll('[data-step]');
+        const dotWraps = document.querySelectorAll('[data-dot-wrap]');
+        const dots = document.querySelectorAll('[data-dot]');
+        const labels = document.querySelectorAll('[data-dot-wrap] span:not([data-dot])');
+        const bar = document.getElementById('wizardBar');
+        const backBtn = document.getElementById('wizBack');
+        const nextBtn = document.getElementById('wizNext');
+        const submitBtn = document.getElementById('wizSubmit');
+        const currentEl = document.getElementById('wizCurrent');
+        const fileInput = document.getElementById('resumeFile');
+        const fileName = document.getElementById('resumeFileName');
+        let current = 0;
+
+        function render() {
+          steps.forEach((s, i) => s.classList.toggle('hidden', i !== current));
+          dots.forEach((d, i) => {
+            const active = i <= current;
+            d.classList.toggle('bg-grad-brand', active);
+            d.classList.toggle('text-white', active);
+            d.classList.toggle('bg-navy-50', !active);
+            d.classList.toggle('text-navy-900/55', !active);
+          });
+          labels.forEach((l, i) => {
+            const active = i <= current;
+            l.classList.toggle('text-navy-900', active);
+            l.classList.toggle('text-navy-900/55', !active);
+          });
+          bar.style.width = ((current + 1) / steps.length * 100) + '%';
+          backBtn.classList.toggle('invisible', current === 0);
+          nextBtn.classList.toggle('hidden', current === steps.length - 1);
+          submitBtn.classList.toggle('hidden', current !== steps.length - 1);
+          currentEl.textContent = String(current + 1);
+        }
+
+        function validateStep() {
+          const fields = steps[current].querySelectorAll('input, select, textarea');
+          for (const f of fields) {
+            if (!f.checkValidity()) {
+              f.reportValidity();
+              return false;
+            }
+          }
+          return true;
+        }
+
+        nextBtn.addEventListener('click', () => {
+          if (!validateStep()) return;
+          if (current < steps.length - 1) {
+            current++;
+            render();
+            form.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+
+        backBtn.addEventListener('click', () => {
+          if (current > 0) {
+            current--;
+            render();
+          }
+        });
+
+        if (fileInput) {
+          fileInput.addEventListener('change', () => {
+            const f = fileInput.files && fileInput.files[0];
+            if (f) {
+              fileName.textContent = f.name;
+              fileName.classList.remove('hidden');
+            } else {
+              fileName.classList.add('hidden');
+            }
+          });
+        }
+
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          if (!validateStep()) return;
+          form.reset();
+          if (fileName) fileName.classList.add('hidden');
+          current = 0;
+          render();
+          alert('Thanks - your resume has been received. Our team will be in touch shortly.');
+        });
+
+        render();
+      })();
+    </script>
+  </body>
+</html>
